@@ -1,0 +1,257 @@
+/* The player wiki's one stylesheet (tools/make-wiki.mjs writes it to the site as site.css). System fonts only: no web
+   font, no image and no other stylesheet pulled in, so a visitor's browser asks GitHub for nothing else (the tests
+   check it). Light and dark follow prefers-color-scheme; the layout reads at phone width (a 16px gutter, wide tables
+   scroll inside their box). */
+
+:root {
+  color-scheme: light dark;
+  --bg: #f6f5f1;
+  --surface: #ffffff;
+  --text: #1c1e21;
+  --muted: #59606c;
+  --faint: #7c838e;
+  --line: #e0ddd5;
+  --accent: #1f6b5a;
+  --accent-soft: #e2efea;
+  --code-bg: #eeebe3;
+  --code-text: #3b2f21;
+  --warn: #a13a1b;
+  --gold: #9a6f00;
+  --sx-root: #6b7280;
+  --sx-cmd: #1f6b5a;
+  --sx-var: #24539a;
+  --sx-in: #8d5200;
+  --radius: 8px;
+  --measure: 46rem;
+  --wide: 66rem;
+  --mono: ui-monospace, "Cascadia Mono", "Cascadia Code", Consolas, "SF Mono", Menlo, "Liberation Mono", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131518;
+    --surface: #1b1e22;
+    --text: #e6e4df;
+    --muted: #a3aab4;
+    --faint: #848b96;
+    --line: #2e3339;
+    --accent: #6fc4aa;
+    --accent-soft: #1c2d28;
+    --code-bg: #262a30;
+    --code-text: #f1e3cc;
+    --warn: #f39a7e;
+    --gold: #e2bb52;
+    --sx-root: #9aa1ab;
+    --sx-cmd: #6fc4aa;
+    --sx-var: #92bbf2;
+    --sx-in: #e6b766;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+code {
+  font-family: var(--mono);
+  font-size: 0.9em;
+  background: var(--code-bg);
+  color: var(--code-text);
+  padding: 0.08em 0.35em;
+  border-radius: 4px;
+  overflow-wrap: anywhere;
+}
+h1, h2, h3 { line-height: 1.25; text-wrap: balance; }
+h1 { font-size: 1.8rem; margin: 0.2em 0 0.6em; letter-spacing: -0.01em; }
+h2 { font-size: 1.3rem; margin: 1.8em 0 0.5em; }
+h3 { font-size: 1.05rem; margin: 1.4em 0 0.4em; }
+p { margin: 0 0 0.9em; }
+
+.skip { position: absolute; left: -9999px; top: 8px; }
+.skip:focus { left: 16px; z-index: 2; background: var(--surface); padding: 6px 10px; border-radius: var(--radius); }
+
+/* the top bar */
+.top { background: var(--surface); border-bottom: 1px solid var(--line); }
+.top-inner {
+  max-width: var(--wide);
+  margin: 0 auto;
+  padding: 10px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 20px;
+}
+.brand { font-weight: 700; color: var(--text); text-decoration: none; white-space: nowrap; }
+.nav { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 2px 4px; }
+.nav a {
+  display: block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.93rem;
+  white-space: nowrap;
+}
+.nav a:hover { color: var(--text); background: var(--accent-soft); }
+.nav a[aria-current="page"] { color: var(--accent); background: var(--accent-soft); font-weight: 600; }
+
+main { max-width: var(--measure); margin: 0 auto; padding: 28px 16px 56px; }
+.page-commands main, .page-leaderboards main { max-width: var(--wide); }
+.lead { color: var(--muted); }
+
+/* the guide's posts and the release notes: a line a paragraph, as Discord shows them */
+.post p { margin: 0 0 0.45em; }
+.post .gap { height: 0.65em; }
+.post .sub { font-size: 0.8rem; color: var(--faint); }
+.post ul.dots { margin: 0.15em 0 0.7em; padding-left: 1.3em; }
+.post ul.dots li { margin: 0 0 0.35em; }
+.post strong { font-weight: 650; }
+.crumb { font-size: 0.9rem; margin: 0 0 0.2em; }
+.crumb a { color: var(--muted); }
+.pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--line);
+  margin-top: 2.5em;
+  padding-top: 1em;
+  font-size: 0.95rem;
+}
+.pager .prev::before { content: "\2190\00a0"; }
+.pager .next::after { content: "\00a0\2192"; }
+.pager .next { margin-left: auto; text-align: right; }
+
+/* a section's list of pages */
+.pages { list-style: none; padding: 0; margin: 0 0 1em; display: grid; gap: 8px; }
+.pages a {
+  display: block;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+.pages a:hover { border-color: var(--accent); }
+.pages .note { display: block; color: var(--muted); font-size: 0.88rem; font-weight: 400; }
+
+/* the Markdown pages: Start here and Join */
+.md ol, .md ul { padding-left: 1.5em; margin: 0 0 1em; }
+.md li { margin: 0 0 0.45em; }
+.md h2 { border-bottom: 1px solid var(--line); padding-bottom: 0.2em; }
+.table-wrap {
+  overflow-x: auto;
+  margin: 0 0 1.2em;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+table { border-collapse: collapse; width: 100%; font-size: 0.94rem; }
+th, td { text-align: left; vertical-align: top; padding: 7px 12px; border-bottom: 1px solid var(--line); }
+tbody tr:last-child td { border-bottom: 0; }
+th { font-weight: 600; color: var(--muted); }
+.md td:first-child { white-space: nowrap; }
+.al-c { text-align: center; }
+.al-r { text-align: right; }
+
+/* Commands */
+.toc { list-style: none; margin: 0 0 1.2em; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.toc a {
+  display: block;
+  padding: 3px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+.toc a:hover { border-color: var(--accent); }
+.group-what { color: var(--muted); margin-top: -0.3em; }
+.cmds { list-style: none; margin: 0; padding: 0; }
+.cmd {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  margin: 0 0 10px;
+}
+.cmds.sub { margin-top: 8px; }
+.cmds.sub .cmd {
+  background: transparent;
+  border: 0;
+  border-left: 3px solid var(--line);
+  border-radius: 0;
+  padding: 3px 0 3px 12px;
+  margin: 6px 0 0;
+}
+.form { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 12px; }
+.form code { background: transparent; padding: 0; font-size: 0.95rem; font-weight: 600; }
+.alias code { font-weight: 600; }
+.sx-root { color: var(--sx-root); }
+.sx-cmd { color: var(--sx-cmd); }
+.sx-var { color: var(--sx-var); }
+.sx-in { color: var(--sx-in); }
+.hover { color: var(--muted); font-size: 0.93rem; margin: 2px 0 0; }
+.who, .alias { color: var(--muted); font-size: 0.88rem; margin: 2px 0 0; }
+.drastic { color: var(--warn); font-size: 0.88rem; font-weight: 600; margin: 2px 0 0; }
+
+/* Leaderboards */
+.boards { display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: 14px; }
+.board {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+}
+.board h3 { margin: 0 0 6px; }
+.board table { font-size: 0.93rem; }
+.board th, .board td { padding: 4px 6px; vertical-align: middle; }
+.board th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; }
+.board .rank { width: 2.4em; color: var(--muted); font-variant-numeric: tabular-nums; }
+.board .value { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.board tr.first .rank { color: var(--gold); font-weight: 700; }
+.empty { color: var(--muted); font-style: italic; margin: 0; }
+/* a player's face: the 8x8 of their skin drawn from the page's own SVG symbols, square and crisp at 32px; the tile
+   behind it shows through a transparent pixel, in light and dark alike */
+.face {
+  display: block;
+  width: 32px;
+  height: 32px;
+  shape-rendering: crispEdges;
+  background: var(--code-bg);
+  outline: 1px solid var(--line);
+}
+.board tr.first .face { outline: 2px solid var(--gold); }
+.face-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+/* What's new */
+details.toc-all { margin: 0 0 1.5em; }
+details.toc-all summary { cursor: pointer; color: var(--accent); font-weight: 600; }
+details.toc-all ul { margin: 0.6em 0 0; padding-left: 1.2em; font-size: 0.94rem; }
+.note-entry { border-top: 1px solid var(--line); margin-top: 2.2em; padding-top: 0.4em; }
+.note-entry h2 { margin-top: 0.5em; }
+.note-date { display: block; font-size: 0.85rem; font-weight: 500; color: var(--muted); text-decoration: none; }
+
+/* the footer */
+.foot { border-top: 1px solid var(--line); background: var(--surface); color: var(--muted); font-size: 0.85rem; }
+.foot-inner { max-width: var(--wide); margin: 0 auto; padding: 18px 16px 30px; }
+.foot p { margin: 0 0 0.3em; }
+.notice { font-size: 0.75rem; letter-spacing: 0.02em; }
+
+@media (max-width: 600px) {
+  body { font-size: 15.5px; }
+  h1 { font-size: 1.5rem; }
+  main { padding-top: 18px; }
+  .top-inner { gap: 4px 12px; }
+  .nav a { padding: 3px 8px; font-size: 0.88rem; }
+  .md td:first-child { white-space: normal; }
+}

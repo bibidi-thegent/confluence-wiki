@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<title>Commands · Confluence wiki</title>
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="page-commands">
+<a class="skip" href="#main">Skip to the page</a>
+<header class="top">
+<div class="top-inner">
+<a class="brand" href="index.html">Confluence wiki</a>
+<nav aria-label="Wiki pages">
+<ul class="nav">
+<li><a href="index.html">Start here</a></li>
+<li><a href="join.html">Join</a></li>
+<li><a href="classes/index.html">Classes and specs</a></li>
+<li><a href="world/index.html">The world</a></li>
+<li><a href="professions/index.html">Professions</a></li>
+<li><a href="commands.html" aria-current="page">Commands</a></li>
+<li><a href="leaderboards.html">Leaderboards</a></li>
+<li><a href="whats-new.html">What&#39;s new</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="main">
+<h1>Commands</h1>
+<p class="lead">Every command a player can use, in the groups <code>/cf help</code> shows in game, made from the same list. In a form, <code><span class="sx-in">&lt;player&gt;</span></code> is a value you fill in, <code><span class="sx-in">[off|on]</span></code> one you may leave out, and <code>a|b</code> means one of them. Hover over a line in game for the same longer text.</p>
+<ul class="toc"><li><a href="#group-play">Play</a></li><li><a href="#group-breach">Breach</a></li><li><a href="#group-town">Town</a></li><li><a href="#group-survival">Survival</a></li><li><a href="#group-chat">Chat</a></li><li><a href="#group-teleport">Teleport</a></li><li><a href="#help">Help</a></li></ul>
+<section id="group-play">
+<h2>Play</h2>
+<p class="group-what">Your kit, levels, quests, Echoes and Deeds</p>
+<ul class="cmds">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">kit</span></code> <span class="what">Pick your Discipline kit</span></p>
+<p class="hover">Your kit is a Discipline: an Expertise (the class) and its spec (Tank, Damage or Healer). Swaps happen out of combat, never in the Colossus arena or a Breach room with a live pack.</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">kit</span></code> <span class="what">Open the Discipline picker</span></p>
+<p class="hover">Every Discipline with its readiness, in a dialog (or the chest menu under vendor.menu: gui).</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">kit</span> <span class="sx-var">list</span></code> <span class="what">List every Discipline</span></p>
+<p class="hover">Every Discipline with its readiness, as text.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">kit</span> <span class="sx-in">&lt;discipline&gt;</span></code> <span class="what">Play a Discipline</span></p>
+<p class="hover">A Discipline id, or an Expertise id for the Discipline you play of it; out of combat.</p>
+</li>
+</ul>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">expertise</span></code> <span class="what">Swap your Expertise</span></p>
+<p class="hover">An Expertise is a class with two Disciplines; each Expertise levels on its own.</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">expertise</span></code> <span class="what">List the Expertises</span></p>
+<p class="hover">Every Expertise with its resource and its Disciplines.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">expertise</span> <span class="sx-in">&lt;expertise&gt;</span></code> <span class="what">Swap to an Expertise</span></p>
+<p class="hover">To the Discipline you play of it, out of combat.</p>
+</li>
+</ul>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">loadout</span></code> <span class="what">Choose your abilities</span></p>
+<p class="hover">Your Discipline&#39;s core abilities, utilities and Talent path (the Spell Book&#39;s rows do it too).</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">loadout</span></code> <span class="what">Open the loadout panel</span></p>
+<p class="hover">Pick the abilities out of combat.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">loadout</span> <span class="sx-var">reset</span></code> <span class="what">Back to the default preset</span></p>
+<p class="hover">Your Discipline&#39;s default preset again; a refused reset keeps the pending edit.</p>
+<p class="drastic">Acts at once: it cannot be taken back.</p>
+</li>
+</ul>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">mastery</span></code> <span class="what">Your level-20 Mastery</span></p>
+<p class="hover">At level 20 each Expertise picks a stat boost; talent is the command&#39;s old name and still works.</p>
+<p class="alias">Also: <code><span class="sx-root">/cf</span> <span class="sx-cmd">talent</span></code></p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">mastery</span></code> <span class="what">List your Masteries</span></p>
+<p class="hover">The Masteries of your active Expertise and the one picked.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">mastery</span> <span class="sx-in">&lt;mastery&gt;</span></code> <span class="what">Pick a Mastery</span></p>
+<p class="hover">From level 20, out of combat; the Drillmaster picks it too.</p>
+</li>
+</ul>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">level</span> <span class="sx-in">[player]</span></code> <span class="what">Your levels, or a player&#39;s</span></p>
+<p class="hover">Your Core level and every Expertise&#39;s level and XP, or an online player&#39;s.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">quest</span></code> <span class="what">Contracts: accept, track, turn in</span></p>
+<p class="hover">The contract board&#39;s dailies, weeklies and Trials. /cf quest alone is /cf quest list.</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">quest</span> <span class="sx-var">list</span></code> <span class="what">Active and available contracts</span></p>
+<p class="hover">Your active contracts with their progress, then the ones on offer and who gives them.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">quest</span> <span class="sx-var">accept</span> <span class="sx-in">&lt;id&gt;</span></code> <span class="what">Accept a contract</span></p>
+<p class="hover">A contract on offer, while you hold fewer than the most you may.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">quest</span> <span class="sx-var">track</span> <span class="sx-in">&lt;id&gt;</span></code> <span class="what">Track a contract</span></p>
+<p class="hover">An active contract&#39;s progress on your HUD.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">quest</span> <span class="sx-var">untrack</span></code> <span class="what">Track nothing</span></p>
+<p class="hover">Clears the tracked contract.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">quest</span> <span class="sx-var">abandon</span> <span class="sx-in">&lt;id&gt;</span></code> <span class="what">Drop a contract</span></p>
+<p class="hover">An active contract (some cannot be dropped).</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">quest</span> <span class="sx-var">turnin</span> <span class="sx-in">&lt;id&gt;</span></code> <span class="what">Turn in a delivery</span></p>
+<p class="hover">Hands a delivery contract&#39;s items over.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">quest</span> <span class="sx-var">reroll</span></code> <span class="what">Reroll today&#39;s dailies</span></p>
+<p class="hover">Once a day.</p>
+</li>
+</ul>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">quests</span></code> <span class="what">Open the quest log</span></p>
+<p class="hover">Your contracts in the quest log&#39;s window.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">profile</span> <span class="sx-var">reset</span></code> <span class="what">Start over at level 1</span></p>
+<p class="hover">Every Expertise back to level 1 with its starting kit, your contracts reset; the drills begin again. Your own profile only.</p>
+<p class="drastic">Acts at once: it cannot be taken back.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">cosmetics</span></code> <span class="what">Your cosmetics: wear, take off</span></p>
+<p class="hover">Everything you own, however it came: bought from the Curator, bought with Echoes, earned by a Deed or a streak. /cf cosmetics alone is /cf cosmetics list.</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">cosmetics</span> <span class="sx-var">list</span></code> <span class="what">Your wallet and wardrobe</span></p>
+<p class="hover">What you own, what is worn of each kind, and each piece&#39;s id.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">cosmetics</span> <span class="sx-var">wear</span> <span class="sx-in">&lt;id&gt;</span></code> <span class="what">Wear a cosmetic</span></p>
+<p class="hover">One of each kind at a time; equip works too.</p>
+<p class="alias">Also: <code><span class="sx-root">/cf</span> <span class="sx-cmd">cosmetics</span> <span class="sx-var">equip</span> <span class="sx-in">&lt;id&gt;</span></code></p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">cosmetics</span> <span class="sx-var">takeoff</span> <span class="sx-in">&lt;kind&gt;</span></code> <span class="what">Take one off</span></p>
+<p class="hover">A kind (aura, title, dye or kill) or a worn piece&#39;s id; unequip works too.</p>
+<p class="alias">Also: <code><span class="sx-root">/cf</span> <span class="sx-cmd">cosmetics</span> <span class="sx-var">unequip</span> <span class="sx-in">&lt;kind&gt;</span></code></p>
+</li>
+</ul>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">echoes</span></code> <span class="what">Your Echoes and streak</span></p>
+<p class="hover">The count, the streak and the next bonus day, this week&#39;s raffle entries, your titles.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">deeds</span> <span class="sx-in">[id|category]</span></code> <span class="what">Your Deeds, or one Deed</span></p>
+<p class="hover">The list by category with your progress, your Deed Points and titles; a category narrows it, an id shows one Deed.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">hub</span></code> <span class="what">Go to the hub</span></p>
+<p class="hover">Teleports you to the hub.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">arena</span></code> <span class="what">Go to the training arena</span></p>
+<p class="hover">The Colossus arena, to practise.</p>
+</li>
+</ul>
+</section>
+<section id="group-breach">
+<h2>Breach</h2>
+<p class="group-what">Parties, runs, raids, gear and the boards</p>
+<ul class="cmds">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">party</span></code> <span class="what">Group up for a Breach</span></p>
+<p class="hover">A party enters a Breach together and shares gathering XP. /cf party alone is /cf party list.</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">party</span> <span class="sx-var">invite</span> <span class="sx-in">&lt;player&gt;</span></code> <span class="what">Invite a player</span></p>
+<p class="hover">An online player; inviting starts a party when you have none.</p>
+<p class="who">Who: Anyone not in a party, or the party&#39;s leader.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">party</span> <span class="sx-var">accept</span></code> <span class="what">Accept an invite</span></p>
+<p class="hover">Joins the party that invited you.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">party</span> <span class="sx-var">decline</span></code> <span class="what">Decline an invite</span></p>
+<p class="hover">Turns the waiting invite down.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">party</span> <span class="sx-var">leave</span></code> <span class="what">Leave your party</span></p>
+<p class="hover">When the leader leaves, the party gets a new one.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">party</span> <span class="sx-var">kick</span> <span class="sx-in">&lt;player&gt;</span></code> <span class="what">Remove a member</span></p>
+<p class="hover">An online member of your party.</p>
+<p class="who">Who: The party&#39;s leader.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">party</span> <span class="sx-var">list</span></code> <span class="what">Your party&#39;s members</span></p>
+<p class="hover">The members and the leader.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">party</span> <span class="sx-var">disband</span></code> <span class="what">End the party</span></p>
+<p class="hover">Every member leaves at once.</p>
+<p class="who">Who: The party&#39;s leader.</p>
+<p class="drastic">Acts at once: it cannot be taken back.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">party</span> <span class="sx-var">share</span> <span class="sx-in">[off|on]</span></code> <span class="what">Share gathering XP</span></p>
+<p class="hover">The party&#39;s gathering XP share (on by default); alone, whether it is on.</p>
+<p class="who">Who: A member sees it; the party&#39;s leader switches it.</p>
+</li>
+</ul>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">dungeon</span></code> <span class="what">Enter, leave and check a Breach</span></p>
+<p class="hover">Breach runs and their vendors. /cf dungeon alone is /cf dungeon status.</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">dungeon</span> <span class="sx-var">enter</span> <span class="sx-in">&lt;tier&gt;</span></code> <span class="what">Enter a Breach tier</span></p>
+<p class="hover">Pays the entry and takes you in, your party with you; alone, the tiers on offer. An op may enter a scenario&#39;s tier to test it.</p>
+<p class="who">Who: Anyone alone; in a party, its leader.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">dungeon</span> <span class="sx-var">leave</span></code> <span class="what">Leave your run</span></p>
+<p class="hover">Out of the Breach you are in.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">dungeon</span> <span class="sx-var">status</span></code> <span class="what">Your run and balance</span></p>
+<p class="hover">The run you are in and your balance.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">dungeon</span> <span class="sx-var">shop</span> <span class="sx-in">[gui|dialog]</span></code> <span class="what">Buy a Breach entry</span></p>
+<p class="hover">The Breach Vendor&#39;s shop: the configured menu, or the chest menu (gui) or the dialog.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">dungeon</span> <span class="sx-var">outfitter</span> <span class="sx-in">[gui|dialog]</span></code> <span class="what">Buy gear</span></p>
+<p class="hover">The Outfitter&#39;s shop: class pieces and Inscribe.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">dungeon</span> <span class="sx-var">curator</span> <span class="sx-in">[gui|dialog]</span></code> <span class="what">Buy cosmetics</span></p>
+<p class="hover">The Curator&#39;s shop.</p>
+</li>
+</ul>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">meter</span></code> <span class="what">Your run&#39;s damage and healing</span></p>
+<p class="hover">The live run&#39;s breakdown so far while you are in one, else your last run&#39;s again.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">raid</span> <span class="sx-var">lockouts</span></code> <span class="what">Your lockouts this week</span></p>
+<p class="hover">Your rooms this week and when they reset; status works too.</p>
+<p class="alias">Also: <code><span class="sx-root">/cf</span> <span class="sx-cmd">raid</span> <span class="sx-var">status</span></code></p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">salvage</span></code> <span class="what">Break gear down into materials</span></p>
+<p class="hover">Breach gear into materials: a preview line first, then confirm.</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">salvage</span> <span class="sx-var">hand</span></code> <span class="what">Salvage the held piece</span></p>
+<p class="hover">Not the weapon in slot 1.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">salvage</span> <span class="sx-var">all</span></code> <span class="what">Salvage every loose piece</span></p>
+<p class="hover">Every unequipped gear piece in the grid and hotbar except slot 1.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">salvage</span> <span class="sx-var">confirm</span></code> <span class="what">Confirm the salvage</span></p>
+<p class="hover">Within the confirm window after the preview.</p>
+</li>
+</ul>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">upgrade</span></code> <span class="what">Raise a piece&#39;s Item Power</span></p>
+<p class="hover">The held Breach piece&#39;s next step: a preview, then confirm.</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">upgrade</span> <span class="sx-var">hand</span></code> <span class="what">Preview the held piece&#39;s step</span></p>
+<p class="hover">What the next step costs and gives.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">upgrade</span> <span class="sx-var">confirm</span></code> <span class="what">Confirm the upgrade</span></p>
+<p class="hover">Within the confirm window after the preview.</p>
+</li>
+</ul>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">vault</span></code> <span class="what">Open your Breach vault</span></p>
+<p class="hover">Your Breach gear, kept off your bag: Breach gear you pick up and Breach chest pieces land there.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">pack</span></code> <span class="what">Your backpacks</span></p>
+<p class="hover">Shulker boxes worn as packs, counted from 1; the mod&#39;s Packs tab is their window. /cf pack alone is /cf pack list.</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">pack</span> <span class="sx-var">list</span></code> <span class="what">Your packs and their switches</span></p>
+<p class="hover">Each pack&#39;s box, how full it is and its overflow switch.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">pack</span> <span class="sx-var">equip</span> <span class="sx-in">&lt;slot&gt;</span></code> <span class="what">Equip the held box</span></p>
+<p class="hover">As that pack; a box already there goes back to your hand.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">pack</span> <span class="sx-var">unequip</span> <span class="sx-in">&lt;slot&gt;</span></code> <span class="what">Take a pack off</span></p>
+<p class="hover">With everything in it, into your bag.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">pack</span> <span class="sx-var">open</span> <span class="sx-in">&lt;slot&gt;</span></code> <span class="what">Open a pack</span></p>
+<p class="hover">The pack&#39;s window.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">pack</span> <span class="sx-var">overflow</span> <span class="sx-in">&lt;slots&gt;</span> <span class="sx-in">&lt;on|off&gt;</span></code> <span class="what">Overflow switch</span></p>
+<p class="hover">With overflow on, what you pick up with a full bag flows into that pack.</p>
+</li>
+</ul>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">gear</span></code> <span class="what">Your gear&#39;s look and your two kits</span></p>
+<p class="hover">Your gear pieces and your two kits (the Breach kit and the survival kit).</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">gear</span> <span class="sx-var">refresh</span></code> <span class="what">Rebuild your gear&#39;s look</span></p>
+<p class="hover">Every gear piece you carry rebuilt on the current band body, colour and trim; a worn dye is kept.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">gear</span> <span class="sx-var">kits</span></code> <span class="what">Your Breach and survival kits</span></p>
+<p class="hover">One line per slot: which is in the inventory and which is stored.</p>
+</li>
+</ul>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">worldboss</span></code> <span class="what">The world boss pylons</span></p>
+<p class="hover">Shards deposited at the hub&#39;s pylons summon the world boss. /cf worldboss alone is /cf worldboss status.</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">worldboss</span> <span class="sx-var">status</span></code> <span class="what">The pylons&#39; pool</span></p>
+<p class="hover">What each pylon holds and how far off the summon is.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">worldboss</span> <span class="sx-var">deposit</span> <span class="sx-in">&lt;1-max&gt;</span></code> <span class="what">Deposit at a pylon</span></p>
+<p class="hover">Your Shards at that pylon (with the Confluence mod).</p>
+</li>
+</ul>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">top</span></code> <span class="what">The hub scoreboards</span></p>
+<p class="hover">The Records&#39; boards: levels, clears and more.</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">top</span></code> <span class="what">Every board and its leader</span></p>
+<p class="hover">The boards with the player on top of each.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">top</span> <span class="sx-in">&lt;board&gt;</span></code> <span class="what">One board&#39;s places</span></p>
+<p class="hover">Rank, name and value, and a fastest clear&#39;s party.</p>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="group-town">
+<h2>Town</h2>
+<p class="group-what">Towns, plots, locks and your home</p>
+<ul class="cmds">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span></code> <span class="what">Found and run a town</span></p>
+<p class="hover">Towns in the towns&#39; world: claims, members, assistants, the spawn and the farm settings. Assistants claim, release, invite, kick, move the spawn, edit and set the settings like the mayor.</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">create</span> <span class="sx-in">&lt;name&gt;</span></code> <span class="what">Found a town here</span></p>
+<p class="hover">On the chunks around you, in the towns&#39; world; the name, the distance from other towns and the cost are checked.</p>
+<p class="who">Who: A player in no town.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">info</span> <span class="sx-in">[name]</span></code> <span class="what">A town&#39;s mayor, members and plots</span></p>
+<p class="hover">Yours (or the one you stand in), or any by name: the mayor, members, assistants, plots and settings.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">list</span></code> <span class="what">Every town</span></p>
+<p class="hover">Each town with its mayor, members and chunks.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">claim</span></code> <span class="what">Claim this chunk</span></p>
+<p class="hover">Next to the town, under the limit, apart from other towns; the one who claims pays.</p>
+<p class="who">Who: The mayor or an assistant.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">unclaim</span></code> <span class="what">Release this chunk</span></p>
+<p class="hover">Nothing is refunded.</p>
+<p class="who">Who: The mayor or an assistant.</p>
+<p class="drastic">Acts at once: it cannot be taken back.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">invite</span> <span class="sx-in">&lt;player&gt;</span></code> <span class="what">Invite a player</span></p>
+<p class="hover">An online player in no town.</p>
+<p class="who">Who: The mayor or an assistant.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">join</span> <span class="sx-in">&lt;town&gt;</span></code> <span class="what">Join a town that invited you</span></p>
+<p class="hover">The town&#39;s invite must be waiting.</p>
+<p class="who">Who: A player in no town, with an invite.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">leave</span></code> <span class="what">Leave your town</span></p>
+<p class="hover">The mayor cannot leave; delete the town instead.</p>
+<p class="who">Who: A member other than the mayor.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">kick</span> <span class="sx-in">&lt;player&gt;</span></code> <span class="what">Remove a member</span></p>
+<p class="hover">An assistant never removes the mayor or another assistant.</p>
+<p class="who">Who: The mayor or an assistant.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">assistant</span> <span class="sx-in">&lt;player&gt;</span></code> <span class="what">Make a member an assistant</span></p>
+<p class="hover">An assistant does the mayor&#39;s work except naming assistants and deleting the town.</p>
+<p class="who">Who: The mayor.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">unassistant</span> <span class="sx-in">&lt;player&gt;</span></code> <span class="what">Remove an assistant</span></p>
+<p class="hover">The member keeps their place in the town.</p>
+<p class="who">Who: The mayor.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">setspawn</span></code> <span class="what">Move the town&#39;s spawn here</span></p>
+<p class="hover">On the town&#39;s own land.</p>
+<p class="who">Who: The mayor or an assistant.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">spawn</span> <span class="sx-in">[name]</span></code> <span class="what">Go to your town, or any</span></p>
+<p class="hover">Your town&#39;s spawn, or a town&#39;s by name.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">delete</span></code> <span class="what">Disband your town</span></p>
+<p class="hover">Every member is told; the land is free again.</p>
+<p class="who">Who: The mayor.</p>
+<p class="drastic">Acts at once: it cannot be taken back.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">wilds</span></code> <span class="what">Go to the wilds</span></p>
+<p class="hover">A safe spot in the wilds around the hub, once per cooldown; frontier works too.</p>
+<p class="alias">Also: <code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">frontier</span></code></p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">edit</span></code> <span class="what">Toggle edit mode</span></p>
+<p class="hover">The town&#39;s outline around you while it is on; claims and releases follow the usual rules.</p>
+<p class="who">Who: The mayor or an assistant.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">chat</span> <span class="sx-in">[message]</span></code> <span class="what">Town chat; alone toggles it</span></p>
+<p class="hover">A line to your town; alone, sticky town chat on or off (/t does the same).</p>
+<p class="who">Who: A member of the town.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">mobs</span> <span class="sx-in">[off|on]</span></code> <span class="what">Keep hostile mobs out</span></p>
+<p class="hover">off keeps hostile mobs out of the town, on lets them back; alone, the town&#39;s setting.</p>
+<p class="who">Who: A member sees it; the mayor or an assistant sets it.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">trample</span> <span class="sx-in">[off|on]</span></code> <span class="what">Stop farmland trampling</span></p>
+<p class="hover">off: nobody tramples the town&#39;s farmland, members included; alone, the town&#39;s setting.</p>
+<p class="who">Who: A member sees it; the mayor or an assistant sets it.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">crops</span> <span class="sx-in">[shared|owner]</span></code> <span class="what">Who harvests plot crops</span></p>
+<p class="hover">shared: any member harvests on every owned plot; owner: only those who may build on it (its owner, the players they allowed, the mayor and the assistants). The town&#39;s own land keeps the build rule either way.</p>
+<p class="who">Who: A member sees it; the mayor or an assistant sets it.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span> <span class="sx-var">stands</span> <span class="sx-in">[shared|owner]</span></code> <span class="what">Who gets brewing XP</span></p>
+<p class="hover">shared: a brewing stand in the town pays any member&#39;s brews (Alchemy&#39;s XP and perks); owner: only its placer&#39;s.</p>
+<p class="who">Who: A member sees it; the mayor or an assistant sets it.</p>
+</li>
+</ul>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span></code> <span class="what">Sell, buy or share the plot you stand on</span></p>
+<p class="hover">A plot is the chunk you stand on, in a town. /cf plot alone is /cf plot info.</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">forsale</span> <span class="sx-in">[price]</span></code> <span class="what">Put the plot up for sale</span></p>
+<p class="hover">At the price given, or the default; a sale pays the plot&#39;s owner, or the mayor for town land.</p>
+<p class="who">Who: The plot&#39;s owner, the mayor or an assistant.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">notforsale</span></code> <span class="what">Take it off the market</span></p>
+<p class="hover">The sale ends.</p>
+<p class="who">Who: The plot&#39;s owner, the mayor or an assistant.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">buy</span></code> <span class="what">Buy the plot</span></p>
+<p class="hover">A plot for sale in your own town.</p>
+<p class="who">Who: A member of the town.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">info</span></code> <span class="what">Owner, sale and builders</span></p>
+<p class="hover">The plot&#39;s town, owner, price and who may build on it.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">give</span> <span class="sx-in">&lt;player&gt;</span></code> <span class="what">Give the plot to a member</span></p>
+<p class="hover">It becomes theirs.</p>
+<p class="who">Who: The plot&#39;s owner, the mayor or an assistant.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">allow</span> <span class="sx-in">&lt;player&gt;</span></code> <span class="what">Let a player build here</span></p>
+<p class="hover">On an owned plot: any player who has joined the server, online or not.</p>
+<p class="who">Who: The plot&#39;s owner, the mayor or an assistant.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">deny</span> <span class="sx-in">&lt;player&gt;</span></code> <span class="what">Take building rights back</span></p>
+<p class="hover">By the name on the plot&#39;s list.</p>
+<p class="who">Who: The plot&#39;s owner, the mayor or an assistant.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">evict</span></code> <span class="what">Return the plot to town land</span></p>
+<p class="hover">The former owner hears it, and so does the town; an assistant never evicts the mayor or another assistant.</p>
+<p class="who">Who: The mayor or an assistant.</p>
+<p class="drastic">Acts at once: it cannot be taken back.</p>
+</li>
+</ul>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">lock</span></code> <span class="what">Lock doors and containers to you</span></p>
+<p class="hover">Containers, doors and trapdoors: the next right-click within the arm window takes the action.</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">lock</span></code> <span class="what">Lock or unlock the next one</span></p>
+<p class="hover">Arms a lock: right-click a container, door or trapdoor (an unlocked one, or one of yours) within the window.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">lock</span> <span class="sx-var">add</span> <span class="sx-in">&lt;player&gt;</span> <span class="sx-in">[persist]</span></code> <span class="what">Share the next one</span></p>
+<p class="hover">Anyone who has joined, online or not; persist keeps sharing every one you right-click until you type it again.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">lock</span> <span class="sx-var">remove</span> <span class="sx-in">&lt;player&gt;</span> <span class="sx-in">[persist]</span></code> <span class="what">Stop sharing one</span></p>
+<p class="hover">Takes the player off the next one; persist keeps doing it until you type it again.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">lock</span> <span class="sx-var">list</span></code> <span class="what">Your locks</span></p>
+<p class="hover">Each lock with where it stands and who shares it.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">lock</span> <span class="sx-var">persist</span></code> <span class="what">Keep locking every click</span></p>
+<p class="hover">Every one you right-click is locked (or unlocked) until you type it again or it sits idle too long.</p>
+</li>
+</ul>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/home</span></code> <span class="what">Your one home: go, set, remove</span></p>
+<p class="hover">One home in the survival worlds. From the hub and the Quarry /home goes at once; elsewhere it warms up, and moving or damage cancels it. An op&#39;s /home always goes at once.</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/home</span></code> <span class="what">Go home</span></p>
+<p class="hover">From the survival worlds, their Nether and End, the hub and the Quarry.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/home</span> <span class="sx-cmd">set</span></code> <span class="what">Set your home here</span></p>
+<p class="hover">In a survival world; replacing an old home asks first.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/home</span> <span class="sx-cmd">set</span> <span class="sx-var">confirm</span></code> <span class="what">Confirm a replacement</span></p>
+<p class="hover">Within the time the replace line names.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/home</span> <span class="sx-cmd">remove</span></code> <span class="what">Remove your home</span></p>
+<p class="hover">No home until you set one again.</p>
+<p class="drastic">Acts at once: it cannot be taken back.</p>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="group-survival">
+<h2>Survival</h2>
+<p class="group-what">Professions, market, wilds, Quarry, gates</p>
+<ul class="cmds">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">skill</span> <span class="sx-in">&lt;profession&gt;</span></code> <span class="what">Start a profession&#39;s Prime</span></p>
+<p class="hover">As the profession tool&#39;s right-click does.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">professions</span></code> <span class="what">Your profession levels</span></p>
+<p class="hover">Every profession&#39;s level, with your Crop Sense and Senses.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">market</span></code> <span class="what">The Hub Market and its stalls</span></p>
+<p class="hover">Buy and sell at the current prices; a sale goes to the market that buys the item.</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">market</span></code> <span class="what">Open the Hub Market</span></p>
+<p class="hover">The Hub Market&#39;s menu: buy and sell at the current prices.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">market</span> <span class="sx-in">&lt;vendors&gt;</span></code> <span class="what">Open a stall</span></p>
+<p class="hover">A themed vendor&#39;s stall on the market island.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">market</span> <span class="sx-var">sell</span> <span class="sx-in">&lt;hand|all&gt;</span></code> <span class="what">Sell the held stack or all</span></p>
+<p class="hover">hand: the held stack at the market that buys it; all: every sellable stack at every market that buys it, with a summary per market.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">market</span> <span class="sx-var">price</span> <span class="sx-in">&lt;item&gt;</span></code> <span class="what">An item&#39;s price</span></p>
+<p class="hover">The current price at the market that sells the item.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">market</span> <span class="sx-var">stock</span> <span class="sx-in">&lt;item&gt;</span></code> <span class="what">An item&#39;s stock</span></p>
+<p class="hover">How much the market that sells the item holds.</p>
+</li>
+</ul>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">wilds</span></code> <span class="what">Your Wilds Pass</span></p>
+<p class="hover">Whether you hold it.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">dragon</span></code> <span class="what">Is the End&#39;s dragon up?</span></p>
+<p class="hover">Each survival End&#39;s dragon: alive, rising, or when it returns.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">quarry</span></code> <span class="what">Your Quarry tickets and time</span></p>
+<p class="hover">Your Quarry Tickets, your Quarry time left, the Quarry&#39;s map and the next weekly reset.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">gates</span></code> <span class="what">Your Nether and End gates</span></p>
+<p class="hover">Whether each is open to you.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">net</span></code> <span class="what">About Mob Nets, and the nets you carry</span></p>
+<p class="hover">Where nets come from, what slips the net, and how many filled and empty nets your bag holds.</p>
+</li>
+</ul>
+</section>
+<section id="group-chat">
+<h2>Chat</h2>
+<p class="group-what">Town chat and whispers</p>
+<ul class="cmds">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/t</span> <span class="sx-in">[message]</span></code> <span class="what">Town chat; alone toggles it</span></p>
+<p class="hover">A line to your town&#39;s members; /t alone turns sticky town chat on or off (your chat lines go to the town until you type /t again).</p>
+<p class="who">Who: A member of the town.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/w</span> <span class="sx-in">&lt;player&gt;</span> <span class="sx-in">&lt;message&gt;</span></code> <span class="what">Whisper a player</span></p>
+<p class="hover">To an online player: [To Name] and [From Name].</p>
+</li>
+</ul>
+</section>
+<section id="group-teleport">
+<h2>Teleport</h2>
+<p class="group-what">Go to a player, or bring one to you</p>
+<ul class="cmds">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/tpa</span> <span class="sx-in">&lt;player&gt;</span></code> <span class="what">Ask to teleport to a player</span></p>
+<p class="hover">Asks an online player, by exact name, to let you come to them; they answer in chat with [Accept] or [Deny], or /tpaccept and /tpdeny. On Accept you go to where they stand. Not in a fight, nor into or out of a Breach.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/tpahere</span> <span class="sx-in">&lt;player&gt;</span></code> <span class="what">Ask a player to come to you</span></p>
+<p class="hover">Asks an online player, by exact name, to come to you; they answer in chat with [Accept] or [Deny]. On Accept they land where you stand. Not in a fight, nor into or out of a Breach.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/tpaccept</span> <span class="sx-in">[player]</span></code> <span class="what">Accept a teleport request</span></p>
+<p class="hover">Alone, the one request waiting, or a list to pick from when more wait; with a name, that player&#39;s. The rules are checked first: a refused accept leaves the request waiting.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/tpdeny</span> <span class="sx-in">[player]</span></code> <span class="what">Decline a teleport request</span></p>
+<p class="hover">Alone, the one request waiting, or a list to pick from when more wait; with a name, that player&#39;s. The asker is told, and waits a while before asking you again.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/tptoggle</span> <span class="sx-in">[off|on]</span></code> <span class="what">Teleport requests on or off</span></p>
+<p class="hover">Alone it flips; off or on sets it. Off, nobody can ask you and the asker is told so; requests already waiting stay answerable. Kept across logins; an op&#39;s /cf tphere still reaches you.</p>
+</li>
+</ul>
+</section>
+<section id="help">
+<h2>Help</h2>
+<p class="group-what">In no group: the help itself.</p>
+<ul class="cmds">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">help</span> <span class="sx-in">[group|command]</span></code> <span class="what">These help pages</span></p>
+<p class="hover">/cf help lists the groups; /cf help &lt;group&gt; a group&#39;s commands; /cf &lt;command&gt; help (or ?) a command&#39;s variants.</p>
+<p class="alias">Also: <code><span class="sx-root">/cf</span> <span class="sx-cmd">?</span> <span class="sx-in">[group|command]</span></code></p>
+</li>
+</ul>
+</section>
+</main>
+<footer class="foot">
+<div class="foot-inner">
+<p class="notice">NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</p>
+<p class="stamp">Built from ca1492f on 2026-10-27</p>
+<p class="guide-date">Player Guide: Last updated 2026-10-27: benches, teleport requests, Mob Nets and Confluence Caches</p>
+</div>
+</footer>
+</body>
+</html>

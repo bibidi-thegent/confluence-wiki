@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<title>Join · Confluence wiki</title>
+<link rel="stylesheet" href="site.css">
+</head>
+<body class="page-join">
+<a class="skip" href="#main">Skip to the page</a>
+<header class="top">
+<div class="top-inner">
+<a class="brand" href="index.html">Confluence wiki</a>
+<nav aria-label="Wiki pages">
+<ul class="nav">
+<li><a href="index.html">Start here</a></li>
+<li><a href="join.html" aria-current="page">Join</a></li>
+<li><a href="classes/index.html">Classes and specs</a></li>
+<li><a href="world/index.html">The world</a></li>
+<li><a href="professions/index.html">Professions</a></li>
+<li><a href="commands.html">Commands</a></li>
+<li><a href="leaderboards.html">Leaderboards</a></li>
+<li><a href="whats-new.html">What&#39;s new</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<main id="main">
+<div class="md">
+<h1 id="joining-the-confluence-test-server">Joining the Confluence test server</h1>
+<p>You need a paid Minecraft: Java Edition account, the exact game version below, Fabric, two mod jars, Tailscale, and a whitelist entry from Bibidi. Ten minutes the first time.</p>
+<p><strong>Download the kit:</strong> <a href="https://github.com/bibidi-thegent/confluence-join-kit/releases/latest">https://github.com/bibidi-thegent/confluence-join-kit/releases/latest</a> (the <code>confluence-&lt;version&gt;-mc26.2-mods.zip</code> file). Each server update is a new release there, announced in Discord; when the server tells you your mod is out of date, download the newest zip and replace the jars.</p>
+<p><strong>Player Guide:</strong> <a href="https://github.com/bibidi-thegent/confluence-join-kit/blob/main/PLAYER-GUIDE.md">https://github.com/bibidi-thegent/confluence-join-kit/blob/main/PLAYER-GUIDE.md</a> (every class, profession and system; its top line says when it last changed).</p>
+<p><strong>Wiki:</strong> <a href="https://bibidi-thegent.github.io/confluence-wiki/">https://bibidi-thegent.github.io/confluence-wiki/</a> (the Player Guide a page at a time, every command, the leaderboards and every update; easy to read on a phone).</p>
+<div class="table-wrap"><table>
+<thead><tr><th>What</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Minecraft</td><td>26.2 (exactly; not 26.3)</td></tr>
+<tr><td>Mod loader</td><td>Fabric Loader 0.19.5</td></tr>
+<tr><td>Mods</td><td><code>fabric-api-0.161.0+26.2.jar</code> and <code>confluence-mod-0.1.0.jar</code> (both in the kit zip)</td></tr>
+<tr><td>Network</td><td>Tailscale (free), connected to Bibidi&#39;s shared machine</td></tr>
+<tr><td>Server address</td><td>Bibidi&#39;s Tailscale IP, port 25565 (he sends it to you)</td></tr>
+</tbody>
+</table></div>
+<p>The Confluence mod must match the server byte for byte. When Bibidi ships a new kit, replace your jar before joining; an old jar is refused at the handshake and you will see vanilla Minecraft with none of the abilities.</p>
+<h2 id="1-install-the-game-files">1. Install the game files</h2>
+<ol>
+<li>Install Fabric once: run the installer from fabricmc.net, pick game version <strong>26.2</strong> and loader <strong>0.19.5</strong>, Client, Install. It adds a profile named <code>fabric-loader-0.19.5-26.2</code> to the official launcher.</li>
+<li>Unzip the kit. Open <code>%APPDATA%\.minecraft\mods</code> (paste that into the Explorer address bar; make the folder if it is missing) and copy both jars from the zip&#39;s <code>mods</code> folder into it. On an update, replace the old <code>confluence-mod-*.jar</code> with the new one; Fabric API only changes when the game version does.</li>
+<li>In the official launcher, select the <code>fabric-loader-0.19.5-26.2</code> profile and play.</li>
+</ol>
+<p>The first launch should show in the log: <code>Loading Minecraft 26.2 with Fabric Loader 0.19.5</code> and a line <code>Confluence client ready</code>.</p>
+<h2 id="2-install-tailscale-and-accept-the-share">2. Install Tailscale and accept the share</h2>
+<ol>
+<li>Install Tailscale from tailscale.com and sign in (a free personal account; any Google, Microsoft, GitHub or Apple login works).</li>
+<li>Open the share link Bibidi sends you and accept it. His PC then appears in your Tailscale machine list with an address like <code>100.x.y.z</code>.</li>
+<li>Keep Tailscale running while you play. It only carries traffic to his PC.</li>
+</ol>
+<h2 id="3-join">3. Join</h2>
+<ol>
+<li>Type your exact Minecraft name, and nothing else, in <strong>#whitelist-requests</strong> on the Discord server: the bot opens a private ticket for you, and you get a DM once the staff have whitelisted you.</li>
+<li>Start the Fabric profile, Multiplayer, Add Server, address <code>100.x.y.z</code> (the address from step 2; the default port is fine), Join.</li>
+<li>You should land in the hub with the Confluence HUD: a nine-slot ability bar, your health and resource, and a level tag. If you see the vanilla hotbar instead, your mod jar does not match the server: get the latest kit.</li>
+</ol>
+<h2 id="controls-you-need-on-day-one">Controls you need on day one</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Key</th><th>What</th></tr></thead>
+<tbody>
+<tr><td>1 2 3 4</td><td>Core abilities</td></tr>
+<tr><td>Q</td><td>Talent: lights gold with a chime when its trigger is met (opens at Discipline level 10)</td></tr>
+<tr><td>E R</td><td>Utility abilities</td></tr>
+<tr><td>F</td><td>Signature</td></tr>
+<tr><td>G</td><td>Defensive</td></tr>
+<tr><td>Tab</td><td>Cycle target (closest to the crosshair first)</td></tr>
+<tr><td>Shift</td><td>Evade (dodge roll); C crouches in combat mode</td></tr>
+<tr><td>B</td><td>Switch between combat mode and survival mode</td></tr>
+<tr><td>K</td><td>Spell Book: every ability explained, swap your class with the Play button; the Mastery row under Q picks your level-20 Mastery; the last tab, Professions, shows each profession&#39;s Knack, ranks and Prime</td></tr>
+<tr><td>M</td><td>Map (party members are marked; a skull marks where your last survival death dropped your bag). Right-click a spot to set a waypoint there (the server asks for its name); right-click its pennant (or its name) to guide to it, rename it, share it with your party or remove it. The guided one, else your death skull, gets an arrow with its distance right of the hotbar and a column of light at the spot</td></tr>
+<tr><td>I</td><td>Inventory: the Packs and Vault tabs on its top edge, the Sort button under it (click sorts the bag, never the hotbar; right-click changes the mode: Category, Block type, A-Z). A chest, barrel, shulker box, pack or vault window has Sort too (it sorts that container) and <strong>Deposit</strong> beside it: every bag stack whose item is already in the chest goes into it (never hotbar slot 1, your armour, the off-hand or Breach gear; off on the vault). A pack&#39;s window has the <strong>Overflow</strong> button, the hopper at the right end of the row under the pack&#39;s cells: switched on, what you pick up with a full bag flows into that pack</td></tr>
+<tr><td>V</td><td>Town edit mode (mayors only)</td></tr>
+<tr><td>(unbound)</td><td>Toggle meter: the damage meter shows by itself in a party during a Breach or Manor run; bind a key in Options &gt; Controls &gt; Confluence combat to show it solo or hide it</td></tr>
+</tbody>
+</table></div>
+<p><strong>Survival HUD.</strong> In survival mode (B) in the survival worlds your Core level and Discipline tag step aside, and so do the resource bar and the Evade squares (no Evade or casts there). Hold a pickaxe, shovel, axe, hoe, rod or weapon (a sword, a bow, a crossbow, a trident, a mace: Hunting), look at a Smithing Table, Grindstone, furnace (Smithing) or brewing stand (Alchemy) within reach, or punch something with an empty hand (Unarmed, for 10 s), and the bar under your health shows that profession alone: its name and level on the left, its XP on the right, filling in its colour; right of the bars its skill beside a ring that refills as the cooldown runs: its name, and under it the seconds left, &quot;Ready: right-click&quot; (&quot;Ready: sneak + right-click&quot; for the rod and the newer professions), &quot;Primed&quot; or &quot;Active&quot;. From Hunting 20 a line under Hunting&#39;s bar counts the hostiles near you (&quot;4 hostiles, north-east&quot;). Hold anything else (a block, nothing) and that bar stays empty. Combat mode looks as before.</p>
+<p><strong>Professions.</strong> Ten professions level from 1 to 50 in the survival world, the frontier and their Nethers and Ends, and the Quarry (never in the hub or a Breach): Mining, Excavating, Lumberjack, Farming and Fishing by gathering, Smithing (repairs at a Smithing Table, salvage at a Grindstone, your furnaces), Alchemy (brewing in your own stands), Hunting (kills with a weapon), Acrobatics (falls that hurt; none in the Quarry) and Unarmed (your fists). Each has a Knack that grows with every level, ranks that open at their levels (&quot;Rank 1 unlocked: Crop Sense&quot;) and, Acrobatics aside, its Prime (right-click the tool; a sneaking right-click for the newer five). Press K and open the Professions tab for every number; <code>/cf professions</code> lists the levels; the Player Guide has a post for each. Blocks a player placed, generator stone and an over-fished spot pay nothing, so gather from the world. In a party, the profession XP is shared with the members within 50 blocks (each gets 1.5 x the XP / the sharers); the leader turns it off with <code>/cf party share off</code> (and on again with <code>/cf party share on</code>). Every tenth level is announced in your world&#39;s chat. Mining, Excavating and Lumberjack have their full ranks: Ore Sense (from Mining 10: craft a Prospector&#39;s Fork from two iron ingots side by side over a stick, hold an ore&#39;s metal in your off hand and left-click stone; three sonar waves flash that ore through the stone, then the fork rings again after a few minutes), Breaker Charges (sneak + right-click TNT with a pickaxe, from 20; only where TNT may go off, which is the Quarry), Unearthing (digging turns up finds the Hub Market buys, from Excavating 5), Clear Cut, Seedfall and Lumber Yard (Burrow and Hollow Sense were removed on 2026-10-22). The Senses have an unbound show / hide key in Controls (&#39;Deep, Beast Sense: show / hide&#39;; the fork&#39;s ping is never hidden). Farming and Fishing have theirs too: Replant (a ripe crop broken with a hoe replants from your seeds, from Farming 10), the Tables (farm foods and fish fill you more), Hedge Finds and Greenhouse; Treasure Lines (catches come up as tools, armour, books and finds the Hub Market buys, from Fishing 5), Hooked (reel in a mob to shake a drop off it), Ice Fishing, Enchanted Lines and Deep Sense (treasure hotspots shimmer on the water while you hold a rod, from Fishing 35; the same Senses key).</p>
+<p>Chat commands worth knowing: <code>/cf kit</code> opens the class picker, <code>/cf loadout</code> picks your abilities from the pools, <code>/cf party invite &lt;name&gt;</code> and <code>/cf party accept</code> form a party, <code>/cf hub</code> returns to the hub, and <code>/cf</code> alone lists every command by group (<code>/cf help town</code> shows one group). Combat mode in the wilds (the survival world, its Nether and End) needs the <strong>Wilds Pass</strong>: kill the Ender Dragon (everyone at the kill gets a Dragon Egg, party members in the End too) and trade the egg to the Town Warden; until then B keeps you in survival mode out there (the hub, the arena and the Breaches stay combat), and <code>/cf wilds</code> shows your pass. <code>/cf lock</code> then a right-click locks a chest, door or trapdoor to you (<code>/cf lock add &lt;name&gt;</code> shares it; <code>/cf lock persist</code> keeps locking whatever you right-click until you type it again). A locked wooden or copper door shuts itself 3 s after you open it, and a locked double door swings as one. A Name Tag titles a chest or barrel: one named at an anvil at once, a plain one opens a window to type it (a new title uses up the tag); sneak + right-click with one shows the title on its front. A sign with <code>[lift]</code> on its second line is a lift: put one on each floor straight above each other, left-click a lift sign to ride up and right-click to ride down (sneak to break the sign). Dying in the survival world drops your bag where you died (your hotbar slot 1, worn armour, off-hand, shulker boxes and Breach gear stay) and resets your XP levels; the map&#39;s skull shows the spot until you walk back to it. A red skull beside your target&#39;s name means a ready key would kill it now: that key&#39;s cap is outlined in red. Heals float as green numbers over the player they land on and your log names both sides (&quot;You healed Bob 570&quot;); a heal past full leaves a small shield. When a run ends a breakdown of everyone&#39;s damage and healing opens (Esc closes it) and goes to chat; <code>/cf meter</code> shows it again.</p>
+<p><strong>The raid.</strong> Threshold Manor is entered at the <strong>Raid Gate</strong>: walk out along the plaza&#39;s east arm to the terrace and step through the dark oak gate (its floating name reads &quot;Raid Gate&quot;, &quot;Threshold Manor&quot;); its menu lists the two manor tiers (the Breach Vendor still sells every tier). The Rehearsal is free and takes anyone, alone or in a party, to learn the fights; the Soiree is the raid proper (a party of two or more, Core Level 15 and a Warden&#39;s Breach clear). Soiree loot is locked out per boss room each week: once you have been there for a boss room&#39;s clear, you can still help friends through it (kill XP and tokens as usual) but its chest, Shards, relic and clear bonus wait for Monday&#39;s reset. <code>/cf raid lockouts</code> shows yours. If your connection drops during a run you have 5 minutes to log back in: you come back in the same room with your loot and stats, not in the hub.</p>
+<p><strong>The Quarry.</strong> A Peaceful world for digging in bulk through the sandstone Quarry Gate beside the Raid Gate&#39;s terrace, north of the plaza&#39;s east arm: one Quarry Ticket (Breach and Manor chests, Excavating, or ¥400 at the Town Warden) buys an hour, nothing hurts you there, TNT works, and it is wiped every Sunday at 04:00 back to the same map (<code>/cf quarry</code> shows your tickets and time). You arrive on the Quarry hub, a sky platform with fourteen portals: pick the biome you came to dig (Desert, Badlands, Forest, Taiga, Jungle, Swamp, Mountains, Ocean, Savanna, Snowy, Cherry, Dark Forest, Mushroom, Lush Caves) and the frame on its pad brings you back.</p>
+<p><strong>The hub gates.</strong> By the World Gate: the Nether Gate (one Ghast Tear to the Town Warden) and the End Gate (Wilds Pass holders and their party), <code>/cf gates</code>.</p>
+<p><strong>Echoes.</strong> Once a day step onto the Calendar&#39;s amethyst sill east of the plaza for an Echo; the Chronicler beside the Calendar trades them for prizes, and Sunday at 20:00 a raffle draws from the week&#39;s Echoes (<code>/cf echoes</code>).</p>
+<p><strong>Deeds.</strong> Achievements in the Confluence Deeds tab of the Advancements screen (L), with toasts, Deed Points on the hub&#39;s board and three titles to earn (<code>/cf deeds</code>).</p>
+<p><strong>Packs.</strong> A shulker box equipped as a pack takes the overflow of a full bag once you switch it on: the Overflow button (the hopper at the right end of the row under the pack&#39;s cells) or <code>/cf pack overflow &lt;1|2|3&gt; on|off</code>; <code>/cf pack</code> lists your packs and their switch. A stack of the same item in a pack fills first, then that pack&#39;s empty cells, then the other packs in order; shulker boxes and Breach gear never flow, and packs are put away in the Breaches.</p>
+<p><strong>Hub signs.</strong> Floating names hang just under each gate&#39;s arch, saying what its sign used to say (the World, Quarry, Nether, End and Raid gates have no signs now), over the Records (a sunken records catalog under it, its lectern&#39;s book listing every board&#39;s top ten), and over the bridges to the Market, the Breaches, the Town Portals, the Arena and Combat Training where they leave the central island. The dais&#39;s key cards and the Calendar&#39;s sign still stand.</p>
+<h2 id="if-it-does-not-work">If it does not work</h2>
+<ul>
+<li><strong>&quot;Data mismatch&quot; or vanilla hotbar after joining</strong>: your Confluence jar is older or newer than the server&#39;s. Replace it with the one from the latest kit and restart the game.</li>
+<li><strong>Cannot connect / timed out</strong>: check Tailscale is connected on both ends and that you accepted the share; ask Bibidi whether the server is up.</li>
+<li><strong>&quot;You are not white-listed&quot;</strong>: Bibidi has not added your name yet.</li>
+<li><strong>Wrong Minecraft version</strong> in the launcher: the server is pinned to 26.2; the launcher&#39;s &quot;latest release&quot; is newer and will not connect.</li>
+</ul>
+</div>
+</main>
+<footer class="foot">
+<div class="foot-inner">
+<p class="notice">NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</p>
+<p class="stamp">Built from ca1492f on 2026-10-27</p>
+<p class="guide-date">Player Guide: Last updated 2026-10-27: benches, teleport requests, Mob Nets and Confluence Caches</p>
+</div>
+</footer>
+</body>
+</html>
