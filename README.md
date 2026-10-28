@@ -4,7 +4,7 @@ The player wiki of the Confluence Minecraft server: how to join, the Player Guid
 world, professions), every command a player can use, the leaderboards and every update note.
 
 - **Read it:** https://bibidi-thegent.github.io/confluence-wiki/
-- **Build:** 2bbd9d6 · 2026-10-27 (project commit `2bbd9d6`, published 2026-10-27). The same stamp shows in every page's footer.
+- **Build:** f08905a · 2026-10-28 (project commit `f08905a`, published 2026-10-28). The same stamp shows in every page's footer.
 
 ## These files are generated
 
