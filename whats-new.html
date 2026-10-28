@@ -30,8 +30,10 @@
 <main id="main">
 <h1>What's new</h1>
 <p class="lead">Every update, newest first, as the Discord update threads posted it: what changed, and whether you need the new kit.</p>
-<details class="toc-all"><summary>All 35 updates</summary>
+<details class="toc-all"><summary>All 37 updates</summary>
 <ul>
+<li><a href="#2026-10-27-mounts">2026-10-27 · Mounts: ride animals, fly a phantom</a></li>
+<li><a href="#2026-10-27-death-marker">2026-10-27 · Removing your death marker</a></li>
 <li><a href="#2026-10-27-mount-feel-test">2026-10-27 · Mount feel test (ops only)</a></li>
 <li><a href="#2026-10-27-seats-teleports-nets-caches">2026-10-27 · Benches, teleport requests, Mob Nets and Confluence Caches</a></li>
 <li><a href="#2026-10-26-command-help">2026-10-26 · Command help</a></li>
@@ -69,6 +71,75 @@
 <li><a href="#2026-10-19-feedback-round-2">2026-10-19 · Survival now has teeth</a></li>
 </ul>
 </details>
+<section class="note-entry post" id="2026-10-27-mounts">
+<h2><a class="note-date" href="#2026-10-27-mounts">2026-10-27</a> Mounts: ride animals, fly a phantom</h2>
+<p><strong>The Stable Master</strong></p>
+<ul class="dots">
+<li>A new vendor stands in the hub on the training island, by the yard. Right-click him for riding lessons, one per animal, each yours for good: Cow ¥500, Sheep ¥500, Wolf ¥1,000 and Phantom ¥5,000. A lesson you have reads &quot;Learned&quot;.</li>
+<li>Your first lesson comes with a saddle (at your feet if your bag is full).</li>
+<li>Horses, camels, pigs, striders, happy ghasts and the nautilus still ride as in vanilla, with no lesson.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>Riding a cow, a sheep or your wolf</strong></p>
+<ul class="dots">
+<li>Hold a saddle and right-click a grown cow or sheep, or your own tamed, grown wolf, without crouching. The saddle can be in your main hand, or in your off hand while the main hand is empty or holds your Breach weapon, so it works in combat mode with your weapon in slot 1. The saddle is not used up, and a wolf that sat stands up.</li>
+<li>Not an animal on someone else&#39;s lead or tied to a fence, one with a rider, a young one, or the hub&#39;s animals. On a town&#39;s land you need the town&#39;s leave. While you ride, nobody else can put a lead on your animal; if it ends up on someone&#39;s lead or tied to a fence anyway, you get off.</li>
+<li>W, A, S and D move you the way you look, and the animal turns to face it. Hold the sprint key to go about a third faster (a double-tap of W adds nothing). Space jumps, and it steps up a whole block on its own. A line over your hotbar names your keys.</li>
+<li>The server moves the animal, so it answers your keys a beat late (about your ping plus a tenth to a third of a second). Looking around stays instant.</li>
+<li>Your head may poke into a low ceiling or through a 2-high door, as on a horse, and it never hurts. If your head goes under water, you get off.</li>
+<li>Crouch (C in combat mode) or <code>/cf mount off</code> gets you off. The animal stays where you left it and is itself again: your wolf follows you as before.</li>
+<li>You ride in the main world and the frontier. An incursion&#39;s ring and the hub&#39;s grounds are closed to riders: you meet them like a wall.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>The phantom</strong></p>
+<ul class="dots">
+<li>Once you have its lesson, <code>/cf mount phantom</code> calls it: a phantom swoops in under you and you fly. It needs a little room, and it will not come in a fight, while you fall, while you ride or sit, or within 30 s of sending it away. Each refusal says why.</li>
+<li>It flies where you look: W to go, look down to dive and up to climb, Space to rise, crouch (C in combat mode) to sink. Let go and it hovers. Your own game steers it, so it answers at once.</li>
+<li>A crouch in the air never drops you. To get off, land, let go of crouch and press it again: a crouch you held all the way down keeps you on. In water a crouch gets you off.</li>
+<li><code>/cf mount off</code> gets you off anywhere. In the air you float down under Slow Falling and take no fall damage on that landing; the Slow Falling ends when you land. On the ground you just step down.</li>
+<li>It is yours alone: nobody else can climb on, put it on a lead or shear it.</li>
+<li>It flies in the main world and the frontier only, the Waystation&#39;s plaza included: never the Nether, the End, the hub, the Breaches and the Manor, or the Quarry. An incursion&#39;s ring, the hub&#39;s grounds, a ceiling 16 blocks over the build limit and the edge of the flying area, 4,000 m from the world&#39;s spawn, are walls: you slide along them and one line says why.</li>
+<li>It leaves when you get off, on a teleport, a world change, logging off, a death or a restart, and in the air you float down. Log off in the air (on the phantom, or still floating down from it), or lose the server mid-flight, and you float down when you rejoin.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>Fights</strong></p>
+<ul class="dots">
+<li>Mounts are for travel: you cannot get on or call the phantom in a fight, and a fight starting puts you down (off the phantom, you float down).</li>
+<li>On a walking mount, Evade gets you off without spending a charge, and a cast gets you off and then goes off. On the phantom both wait: &quot;Land first.&quot; (&quot;Get off first.&quot; once you have landed).</li>
+<li>A knockback, a pull or a dash now lands in full on any rider: it takes you off a mount, a boat, a minecart or a horse first. Space never double-jumps while you ride.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>Your HUD</strong></p>
+<ul class="dots">
+<li>On a mount your hunger bar stays and no mount hearts show. Vanilla horses keep theirs.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>Commands</strong></p>
+<ul class="dots">
+<li><code>/cf mount phantom</code>, <code>/cf mount off</code> and <code>/cf mount list</code> (your lessons and how to ride each). <code>/cf help survival</code> lists them.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>New kit required</strong></p>
+<ul class="dots">
+<li>Download the latest zip and replace the confluence-mod jar before you join: the kit draws the phantom and lets you sink with crouch. The server changed too and this update changes the protocol, so an old mod will say &quot;Protocol mismatch&quot;.</li>
+<li>The server restarts once for this update.</li>
+</ul>
+</section>
+<section class="note-entry post" id="2026-10-27-death-marker">
+<h2><a class="note-date" href="#2026-10-27-death-marker">2026-10-27</a> Removing your death marker</h2>
+<ul class="dots">
+<li>On the map (M), right-click your death skull: a small box asks &quot;Remove your death marker?&quot;. <strong>Remove</strong> takes the skull off the map, and the arrow and the column of light stop pointing at it. <strong>Keep</strong> (or Esc) leaves it.</li>
+<li>Your dropped items are not touched: they stay where they fell until they despawn.</li>
+<li>The marker still clears by itself when you walk within 8 m of it, and your next death in the survival worlds still moves it.</li>
+<li>A right-click on the skull now opens that box instead of setting a waypoint. To set one on your death spot, pick <strong>Waypoint here</strong>: the map closes and a box asks for its name, as for any waypoint.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>New kit required</strong></p>
+<ul class="dots">
+<li>Download the latest zip and replace the confluence-mod jar before you join. The server changed too and this changes the protocol, so an old mod will say &quot;Protocol mismatch&quot;.</li>
+<li>The server restarts once for this update.</li>
+</ul>
+</section>
 <section class="note-entry post" id="2026-10-27-mount-feel-test">
 <h2><a class="note-date" href="#2026-10-27-mount-feel-test">2026-10-27</a> Mount feel test (ops only)</h2>
 <p><strong>What it is</strong></p>
@@ -1045,8 +1116,8 @@
 <footer class="foot">
 <div class="foot-inner">
 <p class="notice">NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</p>
-<p class="stamp">Built from ca1492f on 2026-10-27</p>
-<p class="guide-date">Player Guide: Last updated 2026-10-27: benches, teleport requests, Mob Nets and Confluence Caches</p>
+<p class="stamp">Built from 2bbd9d6 on 2026-10-27</p>
+<p class="guide-date">Player Guide: Last updated 2026-10-27: the Riding post (mounts) and the Waypoints post&#39;s death-marker Remove line</p>
 </div>
 </footer>
 </body>
