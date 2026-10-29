@@ -641,16 +641,16 @@
 <p class="hover">Every profession&#39;s level, with your Crop Sense and Senses.</p>
 </li>
 <li class="cmd">
-<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">market</span></code> <span class="what">The Hub Market and its stalls</span></p>
-<p class="hover">Buy and sell at the current prices; a sale goes to the market that buys the item.</p>
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">market</span></code> <span class="what">The market hall&#39;s vendors</span></p>
+<p class="hover">Buy and sell at the current prices; a sale goes to the market that buys the item. The Chronicler buys the finds.</p>
 <ul class="cmds sub">
 <li class="cmd">
-<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">market</span></code> <span class="what">Open the Hub Market</span></p>
-<p class="hover">The Hub Market&#39;s menu: buy and sell at the current prices.</p>
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">market</span></code> <span class="what">Open the Smith</span></p>
+<p class="hover">The Smith&#39;s menu: blocks, materials and tools at the current prices.</p>
 </li>
 <li class="cmd">
-<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">market</span> <span class="sx-in">&lt;vendors&gt;</span></code> <span class="what">Open a stall</span></p>
-<p class="hover">A themed vendor&#39;s stall on the market island.</p>
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">market</span> <span class="sx-in">&lt;vendors&gt;</span></code> <span class="what">Browse</span></p>
+<p class="hover">A market vendor&#39;s wares; each has a booth in the market hall.</p>
 </li>
 <li class="cmd">
 <p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">market</span> <span class="sx-var">sell</span> <span class="sx-in">&lt;hand|all&gt;</span></code> <span class="what">Sell the held stack or all</span></p>
@@ -658,11 +658,37 @@
 </li>
 <li class="cmd">
 <p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">market</span> <span class="sx-var">price</span> <span class="sx-in">&lt;item&gt;</span></code> <span class="what">An item&#39;s price</span></p>
-<p class="hover">The current price at the market that sells the item.</p>
+<p class="hover">The current price at the market that sells the item; for a find (find:relic_shard) it says the Chronicler buys it.</p>
 </li>
 <li class="cmd">
 <p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">market</span> <span class="sx-var">stock</span> <span class="sx-in">&lt;item&gt;</span></code> <span class="what">An item&#39;s stock</span></p>
 <p class="hover">How much the market that sells the item holds.</p>
+</li>
+</ul>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">auction</span></code> <span class="what">The Auctioneer: players&#39; work</span></p>
+<p class="hover">Players sell each other made things (enchanted, brewed, built or designed) at their own price; browse by category and buy at the Auctioneer in the market hall.</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">auction</span></code> <span class="what">Open the Auctioneer</span></p>
+<p class="hover">The catalog by category, your listings, Collect and Post, from anywhere in the hub.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">auction</span> <span class="sx-var">post</span> <span class="sx-in">&lt;price&gt;</span></code> <span class="what">List the held stack</span></p>
+<p class="hover">The stack in your hand at that price in whole Yen for the whole stack (5000, 5,000 or 5k), in the hub; made things only.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">auction</span> <span class="sx-var">cancel</span> <span class="sx-in">&lt;n&gt;</span></code> <span class="what">Cancel a listing</span></p>
+<p class="hover">Your listing with that number in /cf auction list, in the hub; it comes back to your bag, or waits at the Auctioneer.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">auction</span> <span class="sx-var">collect</span></code> <span class="what">Collect your mailbox</span></p>
+<p class="hover">Ended, cancelled and bought stacks into your bag, in the hub; the sale notes are read out.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">auction</span> <span class="sx-var">list</span></code> <span class="what">Your listings in chat</span></p>
+<p class="hover">Each with its price and time left, numbered for cancel.</p>
 </li>
 </ul>
 </li>
@@ -766,8 +792,8 @@
 <footer class="foot">
 <div class="foot-inner">
 <p class="notice">NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</p>
-<p class="stamp">Built from f08905a on 2026-10-28</p>
-<p class="guide-date">Player Guide: Last updated 2026-10-28: the Towns post (outposts, the mob ban), The travelling trader post, the Mob Nets post&#39;s Getting nets line and the chest wheel in Around the world</p>
+<p class="stamp">Built from 3d1370c on 2026-10-28</p>
+<p class="guide-date">Player Guide: Last updated 2026-10-28: the market hall with the Smith, the Grocer and the Auctioneer&#39;s own post, the Chronicler buying the finds in the professions&#39; lines, and the Stable Master&#39;s...</p>
 </div>
 </footer>
 </body>

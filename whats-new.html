@@ -30,8 +30,9 @@
 <main id="main">
 <h1>What's new</h1>
 <p class="lead">Every update, newest first, as the Discord update threads posted it: what changed, and whether you need the new kit.</p>
-<details class="toc-all"><summary>All 38 updates</summary>
+<details class="toc-all"><summary>All 39 updates</summary>
 <ul>
+<li><a href="#2026-10-28-market-hall-auctioneer">2026-10-28 · Feedback round 8: the market hall, the Auctioneer, the Chronicler&#39;s finds and the stable stall</a></li>
 <li><a href="#2026-10-28-feedback-round-7">2026-10-28 · Feedback round 7: the travelling trader, town outposts, the mob ban and the chest wheel</a></li>
 <li><a href="#2026-10-27-mounts">2026-10-27 · Mounts: ride animals, fly a phantom</a></li>
 <li><a href="#2026-10-27-death-marker">2026-10-27 · Removing your death marker</a></li>
@@ -72,6 +73,58 @@
 <li><a href="#2026-10-19-feedback-round-2">2026-10-19 · Survival now has teeth</a></li>
 </ul>
 </details>
+<section class="note-entry post" id="2026-10-28-market-hall-auctioneer">
+<h2><a class="note-date" href="#2026-10-28-market-hall-auctioneer">2026-10-28</a> Feedback round 8: the market hall, the Auctioneer, the Chronicler&#39;s finds and the stable stall</h2>
+<p><strong>The market hall</strong></p>
+<ul class="dots">
+<li>Every market vendor now trades inside one building: the market hall on the market island (over The Market bridge, whose sign now reads &quot;the market hall, the Auctioneer&quot;), rebuilt bigger with a booth and a counter for each vendor. The copper stalls outside it and the barrel shelves along its walls are gone.</li>
+<li>West wall, from the door: the Smith, the Mason, the Dyer. East wall, from the door: the Grocer, the Gardener, the Sawyer. At the back counter: the Auctioneer.</li>
+<li>An item frame over each vendor shows their trade: an iron pickaxe, chiselled stone bricks, cyan dye, bread, a poppy, an oak log, and a bell for the Auctioneer.</li>
+<li>The Mason, the Dyer, the Gardener and the Sawyer sell what they sold before, at the same prices.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>The Smith and the Grocer</strong></p>
+<ul class="dots">
+<li>The Hub Market is now two vendors. <strong>The Smith</strong> (the old Hub Market villager, now in a toolsmith&#39;s coat) sells blocks, materials and tools. <strong>The Grocer</strong> (a butcher) sells food, farming goods and mob drops.</li>
+<li>No price changed. The Smith keeps the Hub Market&#39;s stock; the Grocer&#39;s stock starts fresh.</li>
+<li><code>/cf market</code> opens the Smith from anywhere (so does <code>/cf market smith</code>), and <code>/cf market grocer</code> opens the Grocer. <code>/cf market sell hand</code> and <code>sell all</code> still take each item to the vendor that buys it.</li>
+<li>The Supply Run and Ore Run dailies now come from the Smith.</li>
+<li>The market no longer buys finds: take them to the Chronicler (below). <code>/cf market</code> points you to him when you try.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>The Auctioneer</strong></p>
+<ul class="dots">
+<li>A new vendor at the back counter of the market hall, where players sell each other what they made, at the price they choose. Right-click it, or type <code>/cf auction</code> anywhere in the hub.</li>
+<li>What sells: made things, not plain goods. Anything enchanted, potions (splash and lingering too, and Alchemy&#39;s own brews and draughts), tipped arrows, enchanted books, shulker boxes (empty or holding survival goods), firework rockets and stars, banners with patterns, shields with a banner, anything renamed at an anvil, trimmed armour, dyed leather or wolf armour, written books, filled maps, suspicious stew, decorated pots with sherds and bundles holding goods.</li>
+<li>Plain stacks (cobblestone, diamonds, bread, an unenchanted pickaxe) are for the market vendors. Breach gear, Mob Nets, finds and anything else of Confluence&#39;s never sell here, nor a shulker box or bundle holding one.</li>
+<li>Posting: click <strong>Post</strong>, click the stack in your bag, type a price in whole Yen for the whole stack (5000, 5,000 or 5k; from ¥1 to ¥100,000,000) and Post. Or, in the hub, hold it and type <code>/cf auction post &lt;price&gt;</code>. A listing stays up 7 days, and you can have 10 up at once.</li>
+<li><strong>No fees:</strong> the buyer&#39;s Yen goes to the seller whole, even while the seller is offline, and the seller hears who bought it, at once or at their next login.</li>
+<li>Buying: pick a category (All, Tools, Weapons, Armour, Enchanted books, Potions and brews, Blocks, Materials, Redstone, Food, Misc), 45 listings to a page. Hover one for its own tooltip plus the price, the price each in a stack, the seller, the time left and the item&#39;s real name and enchantments, so a renamed item cannot pass for another. Click it, then <strong>Buy</strong>.</li>
+<li>Sort by newest, ending soon, price up, price down or price per item. You cannot buy your own listing.</li>
+<li><strong>Your mailbox:</strong> a listing that ended unsold, a cancel, or a buy your bag had no room for waits at the Auctioneer: click <strong>Collect</strong>. <strong>My listings</strong> cancels one for free; a price never changes, so cancel and post again.</li>
+<li><code>/cf auction list</code> shows your listings in chat, numbered, from anywhere; <code>/cf auction cancel &lt;n&gt;</code> and <code>/cf auction collect</code> work in the hub.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>The Chronicler and the finds</strong></p>
+<ul class="dots">
+<li>The Chronicler now buys your finds: Relic Shards, Lore Scraps, Old Coins, Tide Pearls, Sea Glass and Pressed Flowers. With any in your bag, his menu shows <strong>Sell your finds</strong> with how many and the Yen: one click takes every one and pays once. A find in hotbar slot 1 counts too, even while your survival kit is put away in the hub.</li>
+<li>Fixed prices, what the market used to pay: Relic Shard ¥2,400, Lore Scrap ¥1,200, Old Coin ¥4,000, Tide Pearl ¥3,200, Sea Glass ¥960, Pressed Flower ¥2,000.</li>
+<li>The first time you bring each kind, he tells you what it is to him. The other side&#39;s things fall through to this one, and he keeps them.</li>
+<li><strong>Sell your finds</strong> never takes Quarry Tickets, labels or trophies; a label still goes to him through <strong>Hand over a label</strong> for an Echo. A sale to him is not a market sale, so it does not count for a market contract.</li>
+<li>Finds you already hold still stack with new ones.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>The stable stall</strong></p>
+<ul class="dots">
+<li>The Stable Master&#39;s stall moved from the training island to the Town Portals island: north-east of the portal court, beside the path from the bridge, its open front toward the path. The lessons and their prices are the same.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>No new kit needed</strong></p>
+<ul class="dots">
+<li>This update is all on the server: your current jar works.</li>
+<li>The server restarts once for this update, and the hub is rebuilt.</li>
+</ul>
+</section>
 <section class="note-entry post" id="2026-10-28-feedback-round-7">
 <h2><a class="note-date" href="#2026-10-28-feedback-round-7">2026-10-28</a> Feedback round 7: the travelling trader, town outposts, the mob ban and the chest wheel</h2>
 <p><strong>Travelling trader</strong></p>
@@ -1165,8 +1218,8 @@
 <footer class="foot">
 <div class="foot-inner">
 <p class="notice">NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</p>
-<p class="stamp">Built from f08905a on 2026-10-28</p>
-<p class="guide-date">Player Guide: Last updated 2026-10-28: the Towns post (outposts, the mob ban), The travelling trader post, the Mob Nets post&#39;s Getting nets line and the chest wheel in Around the world</p>
+<p class="stamp">Built from 3d1370c on 2026-10-28</p>
+<p class="guide-date">Player Guide: Last updated 2026-10-28: the market hall with the Smith, the Grocer and the Auctioneer&#39;s own post, the Chronicler buying the finds in the professions&#39; lines, and the Stable Master&#39;s...</p>
 </div>
 </footer>
 </body>
