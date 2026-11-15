@@ -30,8 +30,9 @@
 <main id="main">
 <h1>What's new</h1>
 <p class="lead">Every update, newest first, as the Discord update threads posted it: what changed, and whether you need the new kit.</p>
-<details class="toc-all"><summary>All 39 updates</summary>
+<details class="toc-all"><summary>All 40 updates</summary>
 <ul>
+<li><a href="#2026-11-15-warps-post-office-and-more">2026-11-15 · Warps, the post office, plot groups, a see-through map, a bigger market and item links in chat</a></li>
 <li><a href="#2026-10-28-market-hall-auctioneer">2026-10-28 · Feedback round 8: the market hall, the Auctioneer, the Chronicler&#39;s finds and the stable stall</a></li>
 <li><a href="#2026-10-28-feedback-round-7">2026-10-28 · Feedback round 7: the travelling trader, town outposts, the mob ban and the chest wheel</a></li>
 <li><a href="#2026-10-27-mounts">2026-10-27 · Mounts: ride animals, fly a phantom</a></li>
@@ -73,6 +74,97 @@
 <li><a href="#2026-10-19-feedback-round-2">2026-10-19 · Survival now has teeth</a></li>
 </ul>
 </details>
+<section class="note-entry post" id="2026-11-15-warps-post-office-and-more">
+<h2><a class="note-date" href="#2026-11-15-warps-post-office-and-more">2026-11-15</a> Warps, the post office, plot groups, a see-through map, a bigger market and item links in chat</h2>
+<p><strong>Warps</strong></p>
+<ul class="dots">
+<li><code>/warp set &lt;name&gt;</code> marks a warp where you stand (on solid ground, not while swimming or falling): a named place you can go back to, like your home. You can have five of your own.</li>
+<li>A name is up to 24 characters, and spaces are fine (<code>/warp set old mill</code>). Each name is one of a kind across the server: nobody else can have a warp called camp while yours exists, whatever the capitals.</li>
+<li>Set them in the survival worlds and their Nether and End; not in the hub, the Quarry or a Breach.</li>
+<li><code>/warp &lt;name&gt;</code> takes you there the way <code>/home</code> does: hold still for 3 s (moving or taking damage cancels it). From the hub or the Quarry it goes at once. Never from a Breach. A warp in the End needs the Wilds Pass, yours or a party member&#39;s.</li>
+<li><code>/warp set &lt;name&gt;</code> on a warp you already own asks whether to move it there: <strong>Move</strong> or <strong>Keep</strong>, or type <code>/warp set confirm</code>.</li>
+<li><code>/warp delete &lt;name&gt;</code> deletes one of yours, and the name is free again at once. Anyone you shared it with is told.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>Sharing a warp</strong></p>
+<ul class="dots">
+<li><code>/warp invite &lt;name&gt; &lt;player&gt;</code> offers one of your warps to an online player. <code>/warp request &lt;name&gt;</code> asks a warp&#39;s owner to let you use it; the owner has to be online.</li>
+<li>The other player gets a chat line with <strong>[Accept]</strong> and <strong>[Deny]</strong> and has 60 s to answer. After a Deny, wait 60 s before asking that player again. You can invite several players at once; a second ask to the same player replaces the first.</li>
+<li>Shared warps never count toward your five. <code>/warp leave &lt;name&gt;</code> drops a warp someone shared with you; the owner can take a player off with <code>/warp remove &lt;name&gt; &lt;player&gt;</code>.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>The warp list and the map</strong></p>
+<ul class="dots">
+<li><code>/warp list</code> (or just <code>/warp</code>) shows your warps and then the ones shared with you, each with a green <strong>[Go]</strong> button; <code>/warp menu</code> shows them as buttons.</li>
+<li>Your warps and the shared ones show on the map as pennants, &quot;camp (your warp)&quot; or &quot;forge (shared warp)&quot;. Right-click one to guide yourself there.</li>
+<li>The map shows 32 markers in each world. On a very full map the last ones are left off, in this order of keeping: your waypoints, your warps, shared warps, your party&#39;s waypoints, then the Confluence Caches&#39; pennants. A pennant you are guiding to always stays.</li>
+<li><code>/cf help town</code> lists the warp commands beside <code>/home</code>.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>The post office</strong></p>
+<ul class="dots">
+<li>Die in the survival world and your bag no longer falls on the ground: it goes into a death chest at the nearest safe spot, with a timer over it.</li>
+<li>The chest is yours alone for 45 minutes. In the last 15 anyone may take from it (what they take is theirs, and you are told). At 60 minutes whatever is left goes to the post office, free. Right-click the chest to take your things back.</li>
+<li>No safe spot (the void, a lava lake): your items go straight to the post office.</li>
+<li>The Postmaster has a new stall on the town portal island, south of the court. <strong>Collect</strong> takes your free mail. <strong>Collect early</strong> takes your death stacks before their hour is up for a fine: ¥500 + ¥100 a stack, at most ¥5,000. Walking back to the chest is free.</li>
+<li><strong>Send a parcel</strong>: pick a stack in your bag, name any player who has played here (online or not), add a note if you like. ¥100 postage. No Breach gear, Mob Nets or other Confluence items.</li>
+<li>Breach and raid leftovers are mailed to you: loot with no room in your bag when you leave, shares you never opened after a disconnect (a restart no longer loses them), and a relic left on the floor.</li>
+<li>The Auctioneer now mails into the same post office; his <strong>Collect</strong> still works.</li>
+<li>You have mail: a line when you log in, a toast when it arrives, &quot;Post Office (3)&quot; on the hub map and a small gold envelope with the count at the top left of your screen.</li>
+<li><code>/cf mail list</code> shows your mail anywhere; <code>/cf mail collect</code>, <code>/cf mail collect early</code> and <code>/cf mail send &lt;player&gt; [note]</code> work in the hub. <code>/cf mail collect early</code> charges the fine your last <code>/cf mail list</code> showed, so list first.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>Plots and dump chests</strong></p>
+<ul class="dots">
+<li>Touching plots of one owner are now one plot group: <code>/cf plot forsale</code>, <code>buy</code>, <code>give</code>, <code>evict</code>, <code>allow</code> and <code>deny</code> act on the whole group. A group sells at one price, paid once, and the map draws it as one plot.</li>
+<li>Add <code>chunk</code> to act on the chunk you stand on alone: <code>/cf plot forsale 500 chunk</code>, <code>/cf plot give &lt;player&gt; chunk</code>, <code>/cf plot evict chunk</code>.</li>
+<li><code>/cf plot info</code> says how many chunks the group holds and who may build on it.</li>
+<li>A dump chest on your plot now feeds your plots within 9 chunks of it in the same part of the town, never another player&#39;s plot.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>The map</strong></p>
+<ul class="dots">
+<li>The map now sees through glass, panes, iron bars, barriers and light blocks, so a glass roof no longer hides what is under it. Stained and tinted glass tint what is below; ice and leaves still draw. Places you saw before this update fix themselves when you go back to them.</li>
+<li>Zoom out much farther: down to 1 pixel for 16 blocks (1:2, 1:4, 1:8, 1:16). Below 1:1 the plot lines and labels hide; town outlines and names stay, and your markers still work.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>The market</strong></p>
+<ul class="dots">
+<li>The Smith gains Ores (raw iron, copper and gold, their raw blocks, nuggets), Tools, Buckets, Weapons and Armour in every tier up to netherite, and more materials.</li>
+<li><code>/cf market sell all</code> leaves your tools, weapons, armour and buckets in the bag; sell one with <code>/cf market sell hand</code> or the drop key in its menu page.</li>
+<li>Raw metals cost a little more than ingots, because Second Smelt gets more than one ingot from each.</li>
+<li>The Grocer gains raw meat and fish, wild fruit, seeds and more mob drops; the Mason cave, Nether and End blocks; the Gardener ice and snow and more.</li>
+<li>Curios (discs, sherds, trims, heads and the like) are not sold: they are found, not bought.</li>
+<li>The Ghast Tear is no longer sold: the Nether Gate&#39;s key is earned.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>Chat item links</strong></p>
+<ul class="dots">
+<li><code>/hand</code> puts the item in your main hand into chat as <strong>[Item]</strong>: hover it for its full tooltip, as if you held it; click it to see the item in a window.</li>
+<li>Or type <code>[hand]</code> anywhere in a chat line and it becomes the same link.</li>
+<li>It goes to public chat, or to your town while town chat is sticky. One showing every 5 seconds. A very full shulker box or bundle, a filled Mob Net, or a box or bundle holding one shows its name only.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>Mob farms and logging in</strong></p>
+<ul class="dots">
+<li>Wild mobs take fall damage again, so a spawner farm&#39;s drop can leave them one hit from death. A mob killed by the fall alone drops as in vanilla: its base loot, no XP.</li>
+<li>A mob first met already hurt keeps its hurt.</li>
+<li>You log back in to the mode you logged out in, combat or survival. Your first login after this update starts in survival.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>Records on Discord</strong></p>
+<ul class="dots">
+<li>A pinned post in #records shows the top 5 of every hub board, updated on each new record and every hour.</li>
+<li><code>/records</code> in Discord shows every board&#39;s leader; <code>/records &lt;board&gt;</code> a board&#39;s top 10.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>New kit required</strong></p>
+<ul class="dots">
+<li>The mod changed and the protocol is now 28, so an old mod will say &quot;Protocol mismatch&quot;.</li>
+<li>Download the latest zip and, with the game closed, replace confluence-mod-0.1.0.jar in your mods folder with the one from the new zip.</li>
+<li>The server restarts once for this update, and the hub is rebuilt for the Postmaster&#39;s stall.</li>
+</ul>
+</section>
 <section class="note-entry post" id="2026-10-28-market-hall-auctioneer">
 <h2><a class="note-date" href="#2026-10-28-market-hall-auctioneer">2026-10-28</a> Feedback round 8: the market hall, the Auctioneer, the Chronicler&#39;s finds and the stable stall</h2>
 <p><strong>The market hall</strong></p>
@@ -1218,8 +1310,8 @@
 <footer class="foot">
 <div class="foot-inner">
 <p class="notice">NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</p>
-<p class="stamp">Built from 3d1370c on 2026-10-28</p>
-<p class="guide-date">Player Guide: Last updated 2026-10-28: the market hall with the Smith, the Grocer and the Auctioneer&#39;s own post, the Chronicler buying the finds in the professions&#39; lines, and the Stable Master&#39;s...</p>
+<p class="stamp">Built from 7281607 on 2026-11-15</p>
+<p class="guide-date">Player Guide: Last updated 2026-11-15: warps, the post office (a new post), plot groups, the map, the market&#39;s new goods, /hand and the remembered mode</p>
 </div>
 </footer>
 </body>

@@ -377,7 +377,7 @@
 </section>
 <section id="group-town">
 <h2>Town</h2>
-<p class="group-what">Towns, plots, locks and your home</p>
+<p class="group-what">Towns, plots, locks, your home and warps</p>
 <ul class="cmds">
 <li class="cmd">
 <p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">town</span></code> <span class="what">Found and run a town</span></p>
@@ -533,45 +533,45 @@
 </li>
 <li class="cmd">
 <p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span></code> <span class="what">Sell, buy or share the plot you stand on</span></p>
-<p class="hover">A plot is the chunk you stand on, in a town. /cf plot alone is /cf plot info.</p>
+<p class="hover">A plot is the chunk you stand on, in a town; touching plots of one owner are one plot group, and each command acts on the whole group (add chunk for this chunk alone). /cf plot alone is /cf plot info.</p>
 <ul class="cmds sub">
 <li class="cmd">
-<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">forsale</span> <span class="sx-in">[price]</span></code> <span class="what">Put the plot up for sale</span></p>
-<p class="hover">At the price given, or the default; a sale pays the plot&#39;s owner, or the mayor for town land.</p>
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">forsale</span> <span class="sx-in">[price]</span> <span class="sx-in">[chunk]</span></code> <span class="what">Put it up for sale</span></p>
+<p class="hover">At the price given, or the default, for the whole group; a sale pays the plot&#39;s owner, or the mayor for town land. chunk: this chunk alone.</p>
 <p class="who">Who: The plot&#39;s owner, the mayor or an assistant.</p>
 </li>
 <li class="cmd">
-<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">notforsale</span></code> <span class="what">Take it off the market</span></p>
-<p class="hover">The sale ends.</p>
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">notforsale</span> <span class="sx-in">[chunk]</span></code> <span class="what">Take it off the market</span></p>
+<p class="hover">The sale ends, for the whole group; chunk: this chunk alone.</p>
 <p class="who">Who: The plot&#39;s owner, the mayor or an assistant.</p>
 </li>
 <li class="cmd">
-<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">buy</span></code> <span class="what">Buy the plot</span></p>
-<p class="hover">A plot for sale in your own town.</p>
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">buy</span> <span class="sx-in">[chunk]</span></code> <span class="what">Buy the plot</span></p>
+<p class="hover">A plot for sale in your own town: a group at its one price, paid once; chunk: this chunk alone, at its own price.</p>
 <p class="who">Who: A member of the town.</p>
 </li>
 <li class="cmd">
 <p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">info</span></code> <span class="what">Owner, sale and builders</span></p>
-<p class="hover">The plot&#39;s town, owner, price and who may build on it.</p>
+<p class="hover">The plot&#39;s town, owner, price, its group&#39;s size and who may build on it.</p>
 </li>
 <li class="cmd">
-<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">give</span> <span class="sx-in">&lt;player&gt;</span></code> <span class="what">Give the plot to a member</span></p>
-<p class="hover">It becomes theirs.</p>
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">give</span> <span class="sx-in">&lt;player&gt;</span> <span class="sx-in">[chunk]</span></code> <span class="what">Give it to a member</span></p>
+<p class="hover">The whole group becomes theirs; chunk: this chunk alone.</p>
 <p class="who">Who: The plot&#39;s owner, the mayor or an assistant.</p>
 </li>
 <li class="cmd">
-<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">allow</span> <span class="sx-in">&lt;player&gt;</span></code> <span class="what">Let a player build here</span></p>
-<p class="hover">On an owned plot: any player who has joined the server, online or not.</p>
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">allow</span> <span class="sx-in">&lt;player&gt;</span> <span class="sx-in">[chunk]</span></code> <span class="what">Let a player build</span></p>
+<p class="hover">On an owned plot, the whole group: any player who has joined the server, online or not; chunk: this chunk alone.</p>
 <p class="who">Who: The plot&#39;s owner, the mayor or an assistant.</p>
 </li>
 <li class="cmd">
-<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">deny</span> <span class="sx-in">&lt;player&gt;</span></code> <span class="what">Take building rights back</span></p>
-<p class="hover">By the name on the plot&#39;s list.</p>
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">deny</span> <span class="sx-in">&lt;player&gt;</span> <span class="sx-in">[chunk]</span></code> <span class="what">Take building rights</span></p>
+<p class="hover">By the name on the plot&#39;s list, off the whole group; chunk: this chunk alone.</p>
 <p class="who">Who: The plot&#39;s owner, the mayor or an assistant.</p>
 </li>
 <li class="cmd">
 <p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">plot</span> <span class="sx-var">evict</span></code> <span class="what">Return the plot to town land</span></p>
-<p class="hover">The former owner hears it, and so does the town; an assistant never evicts the mayor or another assistant.</p>
+<p class="hover">The whole group goes back (/cf plot evict chunk: this chunk alone); the former owner hears it, and so does the town; an assistant never evicts the mayor or another assistant.</p>
 <p class="who">Who: The mayor or an assistant.</p>
 <p class="drastic">Acts at once: it cannot be taken back.</p>
 </li>
@@ -623,6 +623,64 @@
 <p class="form"><code><span class="sx-root">/home</span> <span class="sx-cmd">remove</span></code> <span class="what">Remove your home</span></p>
 <p class="hover">No home until you set one again.</p>
 <p class="drastic">Acts at once: it cannot be taken back.</p>
+</li>
+</ul>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/warp</span></code> <span class="what">Your five warps: go, set, list, share</span></p>
+<p class="hover">Five named warps of your own, and any others shared with you (they never count toward the five). Names are up to 24 characters and unique. From the hub and the Quarry /warp goes at once; elsewhere it warms up, and moving or damage cancels it.</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/warp</span></code> <span class="what">List your warps</span></p>
+<p class="hover">Yours (how many of the five) and the ones shared with you, each with [Go]: the same as /warp list.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/warp</span> <span class="sx-in">&lt;name&gt;</span></code> <span class="what">Go to a warp</span></p>
+<p class="hover">Yours or one shared with you, from the survival worlds, their Nether and End, the hub and the Quarry; never from a Breach. Into the End needs a Wilds Pass, or a party member&#39;s.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/warp</span> <span class="sx-cmd">set</span> <span class="sx-in">&lt;name&gt;</span></code> <span class="what">Set a warp here</span></p>
+<p class="hover">In a survival world, its Nether or its End (not the hub, the Quarry or a Breach). A name you own already asks to move it.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/warp</span> <span class="sx-cmd">set</span> <span class="sx-var">confirm</span></code> <span class="what">Confirm a move</span></p>
+<p class="hover">Within the time the move line names.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/warp</span> <span class="sx-cmd">list</span></code> <span class="what">List your warps</span></p>
+<p class="hover">Yours (how many of the five) and the ones shared with you, each with [Go].</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/warp</span> <span class="sx-cmd">menu</span></code> <span class="what">Open the warps menu</span></p>
+<p class="hover">One Travel button per warp, yours then the shared ones (a chest menu under vendor.menu: gui). Travel goes as /warp &lt;name&gt; does.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/warp</span> <span class="sx-cmd">invite</span> <span class="sx-in">&lt;name&gt;</span> <span class="sx-in">&lt;player&gt;</span></code> <span class="what">Invite a player</span></p>
+<p class="hover">An online player: they accept or deny on their chat line within 60 s.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/warp</span> <span class="sx-cmd">request</span> <span class="sx-in">&lt;name&gt;</span></code> <span class="what">Ask to use a warp</span></p>
+<p class="hover">Its owner accepts or denies on their chat line within 60 s; refused while the owner is offline.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/warp</span> <span class="sx-cmd">accept</span> <span class="sx-in">[number]</span></code> <span class="what">Accept an invite or request</span></p>
+<p class="hover">Alone, the one waiting for you, or each waiting line again when more wait; the number is a chat line&#39;s, which its [Accept] runs for you.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/warp</span> <span class="sx-cmd">deny</span> <span class="sx-in">[number]</span></code> <span class="what">Turn down an invite or request</span></p>
+<p class="hover">Alone, the one waiting for you, or each waiting line again when more wait; the number is a chat line&#39;s, which its [Deny] runs for you. The asker waits a while before asking you again.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/warp</span> <span class="sx-cmd">remove</span> <span class="sx-in">&lt;name&gt;</span> <span class="sx-in">&lt;player&gt;</span></code> <span class="what">Remove a player</span></p>
+<p class="hover">From a warp of yours: they can no longer go there, and are told if online.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/warp</span> <span class="sx-cmd">leave</span> <span class="sx-in">&lt;name&gt;</span></code> <span class="what">Leave a shared warp</span></p>
+<p class="hover">A warp someone shared with you: off your list and your map. Its owner is told if online.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/warp</span> <span class="sx-cmd">delete</span> <span class="sx-in">&lt;name&gt;</span></code> <span class="what">Delete a warp</span></p>
+<p class="hover">Yours (an op&#39;s: any). The name is free at once; members online are told.</p>
 </li>
 </ul>
 </li>
@@ -693,6 +751,28 @@
 </ul>
 </li>
 <li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">mail</span></code> <span class="what">The post office: your mail</span></p>
+<p class="hover">The Postmaster on the court island keeps your mail: your death chest&#39;s items once their hour is up, Breach leftovers, the Auctioneer&#39;s stacks and parcels other players send you.</p>
+<ul class="cmds sub">
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">mail</span></code> <span class="what">Open the post office</span></p>
+<p class="hover">Collect, collect early, send and your mail list, in the hub.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">mail</span> <span class="sx-var">list</span></code> <span class="what">Your mail in chat</span></p>
+<p class="hover">Each parcel, who it is from and when it is free; anywhere.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">mail</span> <span class="sx-var">collect</span> <span class="sx-in">[early]</span></code> <span class="what">Collect your mail</span></p>
+<p class="hover">Every free parcel into your bag, in the hub; early also takes your death stacks before their hour is up, for the fine /cf mail list names.</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">mail</span> <span class="sx-var">send</span> <span class="sx-in">&lt;player&gt;</span> <span class="sx-in">[note]</span></code> <span class="what">Mail the held stack</span></p>
+<p class="hover">To any player who has played here, online or not, for the postage, in the hub; no Breach gear.</p>
+</li>
+</ul>
+</li>
+<li class="cmd">
 <p class="form"><code><span class="sx-root">/cf</span> <span class="sx-cmd">wilds</span></code> <span class="what">Your Wilds Pass</span></p>
 <p class="hover">Whether you hold it.</p>
 </li>
@@ -738,7 +818,7 @@
 </section>
 <section id="group-chat">
 <h2>Chat</h2>
-<p class="group-what">Town chat and whispers</p>
+<p class="group-what">Town chat, whispers and item links</p>
 <ul class="cmds">
 <li class="cmd">
 <p class="form"><code><span class="sx-root">/t</span> <span class="sx-in">[message]</span></code> <span class="what">Town chat; alone toggles it</span></p>
@@ -748,6 +828,10 @@
 <li class="cmd">
 <p class="form"><code><span class="sx-root">/w</span> <span class="sx-in">&lt;player&gt;</span> <span class="sx-in">&lt;message&gt;</span></code> <span class="what">Whisper a player</span></p>
 <p class="hover">To an online player: [To Name] and [From Name].</p>
+</li>
+<li class="cmd">
+<p class="form"><code><span class="sx-root">/hand</span></code> <span class="what">Show your held item in chat</span></p>
+<p class="hover">Posts the item in your main hand as [Item]: hovering shows its tooltip, a click opens a window showing it. Type [hand] in a chat line to drop the link there instead. Public chat, or your town while town chat is sticky; a short cooldown between showings.</p>
 </li>
 </ul>
 </section>
@@ -792,8 +876,8 @@
 <footer class="foot">
 <div class="foot-inner">
 <p class="notice">NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</p>
-<p class="stamp">Built from 3d1370c on 2026-10-28</p>
-<p class="guide-date">Player Guide: Last updated 2026-10-28: the market hall with the Smith, the Grocer and the Auctioneer&#39;s own post, the Chronicler buying the finds in the professions&#39; lines, and the Stable Master&#39;s...</p>
+<p class="stamp">Built from 7281607 on 2026-11-15</p>
+<p class="guide-date">Player Guide: Last updated 2026-11-15: warps, the post office (a new post), plot groups, the map, the market&#39;s new goods, /hand and the remembered mode</p>
 </div>
 </footer>
 </body>
