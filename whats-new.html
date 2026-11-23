@@ -30,8 +30,9 @@
 <main id="main">
 <h1>What's new</h1>
 <p class="lead">Every update, newest first, as the Discord update threads posted it: what changed, and whether you need the new kit.</p>
-<details class="toc-all"><summary>All 40 updates</summary>
+<details class="toc-all"><summary>All 41 updates</summary>
 <ul>
+<li><a href="#2026-11-22-waystones-loot-packs">2026-11-22 · Waystones, your own loot in structure chests and pack upgrades</a></li>
 <li><a href="#2026-11-15-warps-post-office-and-more">2026-11-15 · Warps, the post office, plot groups, a see-through map, a bigger market and item links in chat</a></li>
 <li><a href="#2026-10-28-market-hall-auctioneer">2026-10-28 · Feedback round 8: the market hall, the Auctioneer, the Chronicler&#39;s finds and the stable stall</a></li>
 <li><a href="#2026-10-28-feedback-round-7">2026-10-28 · Feedback round 7: the travelling trader, town outposts, the mob ban and the chest wheel</a></li>
@@ -74,6 +75,54 @@
 <li><a href="#2026-10-19-feedback-round-2">2026-10-19 · Survival now has teeth</a></li>
 </ul>
 </details>
+<section class="note-entry post" id="2026-11-22-waystones-loot-packs">
+<h2><a class="note-date" href="#2026-11-22-waystones-loot-packs">2026-11-22</a> Waystones, your own loot in structure chests and pack upgrades</h2>
+<p><strong>Waystones</strong></p>
+<ul class="dots">
+<li>Warps are now stones you build. Buy a <strong>Waystone</strong> from the Quartermaster in the hub (¥5,000) and set it down in the survival worlds, their Nether or their End.</li>
+<li>Build its frame round it: the Waystone is the sill of an opening 1 wide and 2 high, with one block each side and three across the top. Stone bricks, cobblestone, bricks, deepslate, sandstone and the polished stones all work, mixed as you like, facing either way.</li>
+<li>When the frame is whole a name box opens (or type <code>/warp set &lt;name&gt;</code> within 120 s). Names are up to 24 characters and one of a kind, and you can own five.</li>
+<li>Walk into a waystone you own or share and pick where to go: you step out in front of the other stone at once, no waiting. A waystone in the End still needs the Wilds Pass, yours or a party member&#39;s.</li>
+<li>Only you and ops can build or break within 3 blocks of your waystone, in the wilds and in towns. Explosions, pistons, fire, water, lava and mobs leave it alone.</li>
+<li>A broken frame makes it dormant: nobody travels to or from it until you mend it. Right-click it with an empty hand to see whether it is whole.</li>
+<li>Break your own Waystone to take it up; set it back, or build a new frame and give it the same name, to rebuild it there. <code>/warp delete &lt;name&gt;</code> frees the name and leaves a standing stone yours to name again.</li>
+<li>Your older warps, set with <code>/warp set</code> before this update, keep working with <code>/warp &lt;name&gt;</code> (hold still 3 s, as before) until you name a waystone after one: that turns the warp into the stone and keeps everyone you shared it with.</li>
+<li>Sharing is as before: <code>/warp invite</code>, <code>/warp request</code>, <code>/warp leave</code> and <code>/warp remove</code>. Shared waystones never count toward your five, and your warps still show on the map as pennants. <code>/warp list</code> shows a waystone with no [Go] button: you reach it by walking into another.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>Your own loot in structure chests</strong></p>
+<ul class="dots">
+<li>In the wilds, a structure&#39;s chest, barrel, chest minecart or chest boat that nobody has opened yet now holds your own loot: every player who opens it gets their own roll.</li>
+<li>What you leave stays there for you until you empty it. Nobody else can take your share, and you cannot take theirs.</li>
+<li>A double chest opens as one window. A chest boat needs a crouch and a right-click (a plain click still boards it).</li>
+<li>You can break one, but only your own copy drops; everyone else&#39;s goes with the block.</li>
+<li>Hoppers cannot empty them, explosions leave them standing, and they cannot be locked. Inside a town, the town&#39;s rules still decide who may open them.</li>
+<li>Chests already opened before this update stay as they were.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>Pack upgrades</strong></p>
+<ul class="dots">
+<li>Three upgrades for your packs, each unlocked once at the Quartermaster for every pack you own: the <strong>Pack Filter</strong> (¥2,000), the <strong>Pack Magnet</strong> (¥5,000) and the <strong>Pack Larder</strong> (¥3,000).</li>
+<li>Turn each one on per pack with the new buttons in the pack&#39;s window; the box&#39;s lore shows what is on. An upgrade you have not unlocked shows where to get it.</li>
+<li><strong>Filter</strong>: give a pack a list (click an item in your bag to add it, click an entry to take it off). Listed items go into that pack first, even with room in your bag, and nothing else goes in.</li>
+<li><strong>Magnet</strong>: pulls dropped items within 6 blocks toward you in the survival worlds. It never pulls what another player dropped, mined or killed. Crouch to pause it.</li>
+<li><strong>Larder</strong>: mark the foods it may eat (effect foods too). When your hunger drops below 14, you eat one marked food from the pack, and the Tables&#39; bonus still counts.</li>
+<li>None of them works in the hub, a Breach or the Quarry.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>For ops (/cf world, /cf pregen)</strong></p>
+<ul class="dots">
+<li><code>/cf world list</code>, <code>/cf world tp &lt;name&gt;</code>, <code>/cf world back</code> and <code>/cf world unload &lt;name&gt;</code> visit other world folders on the server. A world loaded this way is outside Confluence: no towns, homes, warps, death chests or wild mobs there. An old-layout world needs <code>confirm</code> and is upgraded as it loads, so back it up first.</li>
+<li><code>/cf pregen start [radius]</code> pre-generates the wilds round world spawn, 4,000 blocks first and then 10,000, or the one radius given. It runs only while nobody is online and stops the moment someone joins.</li>
+<li><code>/cf pregen status</code>, <code>pause</code>, <code>resume</code> and <code>cancel</code>. Progress is saved, so a restart picks it up where it left off.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>No new kit needed</strong></p>
+<ul class="dots">
+<li>This update is all on the server: your current jar works.</li>
+<li>The server restarts once for this update.</li>
+</ul>
+</section>
 <section class="note-entry post" id="2026-11-15-warps-post-office-and-more">
 <h2><a class="note-date" href="#2026-11-15-warps-post-office-and-more">2026-11-15</a> Warps, the post office, plot groups, a see-through map, a bigger market and item links in chat</h2>
 <p><strong>Warps</strong></p>
@@ -1310,8 +1359,8 @@
 <footer class="foot">
 <div class="foot-inner">
 <p class="notice">NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</p>
-<p class="stamp">Built from 7281607 on 2026-11-15</p>
-<p class="guide-date">Player Guide: Last updated 2026-11-15: warps, the post office (a new post), plot groups, the map, the market&#39;s new goods, /hand and the remembered mode</p>
+<p class="stamp">Built from 630ced1 on 2026-11-23</p>
+<p class="guide-date">Player Guide: Last updated 2026-11-23: Waystones replace command-set warps; wilds structure chests roll loot per player; pack upgrades (Filter, Magnet, Larder) at the Quartermaster; Confluence por...</p>
 </div>
 </footer>
 </body>
