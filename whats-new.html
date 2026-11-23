@@ -30,8 +30,9 @@
 <main id="main">
 <h1>What's new</h1>
 <p class="lead">Every update, newest first, as the Discord update threads posted it: what changed, and whether you need the new kit.</p>
-<details class="toc-all"><summary>All 42 updates</summary>
+<details class="toc-all"><summary>All 43 updates</summary>
 <ul>
+<li><a href="#2026-11-24-permission-ranks">2026-11-24 · Ranks, and towns for sale</a></li>
 <li><a href="#2026-11-23-loading-screen">2026-11-23 · A loading screen when you join</a></li>
 <li><a href="#2026-11-22-waystones-loot-packs">2026-11-22 · Waystones, your own loot in structure chests and pack upgrades</a></li>
 <li><a href="#2026-11-15-warps-post-office-and-more">2026-11-15 · Warps, the post office, plot groups, a see-through map, a bigger market and item links in chat</a></li>
@@ -76,6 +77,50 @@
 <li><a href="#2026-10-19-feedback-round-2">2026-10-19 · Survival now has teeth</a></li>
 </ul>
 </details>
+<section class="note-entry post" id="2026-11-24-permission-ranks">
+<h2><a class="note-date" href="#2026-11-24-permission-ranks">2026-11-24</a> Ranks, and towns for sale</h2>
+<p><strong>Ranks</strong></p>
+<ul class="dots">
+<li>Players can now hold ranks: Helper, Builder, Settler, Moderator and Admin. Everyone holds Player.</li>
+<li>A rank shows as a prefix before your name in chat, in town chat and in the tab list (for example [Builder]). The tab list sorts by rank, then name.</li>
+<li><code>/cf rank</code> shows your own ranks.</li>
+<li>Some ranks follow your Discord roles once you have linked your Minecraft name on the Discord.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>Builders</strong></p>
+<ul class="dots">
+<li>Builders may build in the hub (in survival mode there), the Waystation, on the Quarry hub&#39;s platform and pads, and in any town (never in a locked chest, and they cannot lock, title or dump-feed a town&#39;s chests).</li>
+<li>What a Builder changes on the Quarry hub lasts until the Quarry&#39;s weekly reset.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>Moderators</strong></p>
+<ul class="dots">
+<li>Moderators can kick, ban, pardon, whitelist and delete a town, and mute (but not unmute themselves): a muted player cannot use public chat, town chat, whispers, /msg, /tell, /me or /hand, and is told until when.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>Towns for sale</strong></p>
+<ul class="dots">
+<li>Settlers build towns to sell. A town for sale is marked &quot;(for sale: ¥5,000)&quot; on the map and has a Buy line at the Town Warden.</li>
+<li>If you are in no town, stand in it and type <code>/cf town buy</code> to see its price, then <code>/cf town buy &lt;price&gt;</code> (for example <code>/cf town buy 5000</code>), or click Buy at the Warden and confirm. You pay its price to the Settler who built it and become its mayor, with every mayor power. If the price changed in the meantime, nothing is taken.</li>
+<li>A town for sale lights its hub portal frame once it is sold.</li>
+<li>A mayor cannot buy one; a member of a town leaves it first.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>No new kit</strong></p>
+<ul class="dots">
+<li>Only the server changed: keep your current mod. The server restarts once for this update.</li>
+</ul>
+<div class="gap"></div>
+<p>&lt;!--</p>
+<p>Not for players: Bibidi&#39;s setup before the Discord role sync works (tools/discord-bot/README.md &quot;Rank sync&quot;).</p>
+<p>Step 1: Discord Developer Portal, the bot&#39;s application, Bot tab: turn on Server Members Intent, Save Changes.</p>
+<p>Step 2: Discord: Developer Mode on; copy the id of each role that should give a rank (Server Settings, Roles, Copy ID).</p>
+<p>Step 3: In the bot config on the server PC (discord-bot.json) add &quot;rankRoles&quot;: {&quot;&lt;role id&gt;&quot;: &quot;helper&quot;, ...} with the rank ids helper,</p>
+<p>   builder, settler, moderator, admin (several roles may map to one rank; leave out roles that give none).</p>
+<p>Step 4: Restart the bot (node tools/discord-bot/bot.mjs stop, then start); its log says &quot;rank sync: on (...)&quot;.</p>
+<p>Step 5: Give ranks to players not linked on Discord with /cf rank add &lt;player&gt; &lt;rank&gt; (op or the console).</p>
+<p>--&gt;</p>
+</section>
 <section class="note-entry post" id="2026-11-23-loading-screen">
 <h2><a class="note-date" href="#2026-11-23-loading-screen">2026-11-23</a> A loading screen when you join</h2>
 <p><strong>Every join</strong></p>
@@ -1390,8 +1435,8 @@
 <footer class="foot">
 <div class="foot-inner">
 <p class="notice">NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</p>
-<p class="stamp">Built from b7959a5 on 2026-11-23</p>
-<p class="guide-date">Player Guide: Last updated 2026-11-23: Joining: the loading screen and the first-join welcome; the phantom has no range limit.</p>
+<p class="stamp">Built from 726b441 on 2026-11-23</p>
+<p class="guide-date">Player Guide: Last updated 2026-11-23: Settlements: towns built by Settlers, bought with /cf town buy &lt;price&gt;; staff ranks shown in chat.</p>
 </div>
 </footer>
 </body>
