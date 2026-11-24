@@ -81,7 +81,7 @@
 <h2><a class="note-date" href="#2026-11-24-permission-ranks">2026-11-24</a> Ranks, and towns for sale</h2>
 <p><strong>Ranks</strong></p>
 <ul class="dots">
-<li>Players can now hold ranks: Helper, Builder, Settler, Moderator and Admin. Everyone holds Player.</li>
+<li>Players can now hold ranks: Helper, Builder, Settler, Moderator, Developer and Admin. Everyone holds Player.</li>
 <li>A rank shows as a prefix before your name in chat, in town chat and in the tab list (for example [Builder]). The tab list sorts by rank, then name.</li>
 <li><code>/cf rank</code> shows your own ranks.</li>
 <li>Some ranks follow your Discord roles once you have linked your Minecraft name on the Discord.</li>
@@ -96,6 +96,7 @@
 <p><strong>Moderators</strong></p>
 <ul class="dots">
 <li>Moderators can kick, ban, pardon, whitelist and delete a town, and mute (but not unmute themselves): a muted player cannot use public chat, town chat, whispers, /msg, /tell, /me or /hand, and is told until when.</li>
+<li>Moderators cannot ban, kick, unwhitelist or mute another Moderator, a Developer, an Admin or an op, and cannot turn the whitelist on or off. Developers can act on Moderators and below; Admins on anyone but an op.</li>
 </ul>
 <div class="gap"></div>
 <p><strong>Towns for sale</strong></p>
@@ -116,7 +117,7 @@
 <p>Step 1: Discord Developer Portal, the bot&#39;s application, Bot tab: turn on Server Members Intent, Save Changes.</p>
 <p>Step 2: Discord: Developer Mode on; copy the id of each role that should give a rank (Server Settings, Roles, Copy ID).</p>
 <p>Step 3: In the bot config on the server PC (discord-bot.json) add &quot;rankRoles&quot;: {&quot;&lt;role id&gt;&quot;: &quot;helper&quot;, ...} with the rank ids helper,</p>
-<p>   builder, settler, moderator, admin (several roles may map to one rank; leave out roles that give none).</p>
+<p>   builder, settler, moderator, developer, admin (several roles may map to one rank; leave out roles that give none).</p>
 <p>Step 4: Restart the bot (node tools/discord-bot/bot.mjs stop, then start); its log says &quot;rank sync: on (...)&quot;.</p>
 <p>Step 5: Give ranks to players not linked on Discord with /cf rank add &lt;player&gt; &lt;rank&gt; (op or the console).</p>
 <p>--&gt;</p>
@@ -1435,7 +1436,7 @@
 <footer class="foot">
 <div class="foot-inner">
 <p class="notice">NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</p>
-<p class="stamp">Built from 726b441 on 2026-11-23</p>
+<p class="stamp">Built from 25f54db on 2026-11-24</p>
 <p class="guide-date">Player Guide: Last updated 2026-11-23: Settlements: towns built by Settlers, bought with /cf town buy &lt;price&gt;; staff ranks shown in chat.</p>
 </div>
 </footer>
