@@ -30,8 +30,9 @@
 <main id="main">
 <h1>What's new</h1>
 <p class="lead">Every update, newest first, as the Discord update threads posted it: what changed, and whether you need the new kit.</p>
-<details class="toc-all"><summary>All 43 updates</summary>
+<details class="toc-all"><summary>All 44 updates</summary>
 <ul>
+<li><a href="#2026-11-25-build-tools">2026-11-25 · Build tools for staff, and Crop Sense needs a hoe</a></li>
 <li><a href="#2026-11-24-permission-ranks">2026-11-24 · Ranks, and towns for sale</a></li>
 <li><a href="#2026-11-23-loading-screen">2026-11-23 · A loading screen when you join</a></li>
 <li><a href="#2026-11-22-waystones-loot-packs">2026-11-22 · Waystones, your own loot in structure chests and pack upgrades</a></li>
@@ -77,6 +78,32 @@
 <li><a href="#2026-10-19-feedback-round-2">2026-10-19 · Survival now has teeth</a></li>
 </ul>
 </details>
+<section class="note-entry post" id="2026-11-25-build-tools">
+<h2><a class="note-date" href="#2026-11-25-build-tools">2026-11-25</a> Build tools for staff, and Crop Sense needs a hoe</h2>
+<p><strong>Build tools (Builders, Settlers and staff)</strong></p>
+<ul class="dots">
+<li>Builders and Settlers now have WorldEdit-style tools built into Confluence. <code>//wand</code> gives the Builder&#39;s Wand: left click marks corner 1, right click corner 2. <code>//pos1</code> and <code>//pos2</code> mark them where you stand.</li>
+<li>The selection shows as an amber box through walls, corner 1 green and corner 2 blue, with its size over it (for example &quot;31 x 12 x 40, 14,880 blocks&quot;).</li>
+<li>Edits: <code>//set</code>, <code>//replace</code>, <code>//walls</code>, <code>//faces</code>, <code>//hollow</code>, <code>//overlay</code>, <code>//naturalize</code>, <code>//count</code> and <code>//distr</code>, with mixes such as <code>50%stone,50%andesite</code>. <code>//expand</code>, <code>//contract</code> and <code>//shift</code> reshape the selection.</li>
+<li><code>//undo</code> and <code>//redo</code> go back up to 20 edits. <code>//cancel</code> stops a running edit. An edit of over a million blocks asks you to repeat it first.</li>
+<li>The tools work only where your rank already lets you build: Builders in the hub, the Waystation, the Quarry hub and gate landings, and any town; Settlers in their towns until they sell.</li>
+<li>Blocks placed by the tools drop nothing when broken, by anyone, and pay no profession XP. Items players put into a tool-placed chest still drop.</li>
+<li><code>/cf edit</code> lists every build command.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>Crop Sense</strong></p>
+<ul class="dots">
+<li>Crop Sense frames now show only while you hold a hoe, in either hand.</li>
+<li>Cocoa pods are framed again.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>New kit required</strong></p>
+<ul class="dots">
+<li>The mod changed and the protocol is now 30, so an old mod will say &quot;Protocol mismatch&quot;.</li>
+<li>Download the latest zip and, with the game closed, replace confluence-mod-0.1.0.jar in your mods folder with the one from the new zip.</li>
+<li>The server restarts once for this update.</li>
+</ul>
+</section>
 <section class="note-entry post" id="2026-11-24-permission-ranks">
 <h2><a class="note-date" href="#2026-11-24-permission-ranks">2026-11-24</a> Ranks, and towns for sale</h2>
 <p><strong>Ranks</strong></p>
@@ -1436,8 +1463,8 @@
 <footer class="foot">
 <div class="foot-inner">
 <p class="notice">NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</p>
-<p class="stamp">Built from 25f54db on 2026-11-24</p>
-<p class="guide-date">Player Guide: Last updated 2026-11-23: Settlements: towns built by Settlers, bought with /cf town buy &lt;price&gt;; staff ranks shown in chat.</p>
+<p class="stamp">Built from 0481b2a on 2026-11-25</p>
+<p class="guide-date">Player Guide: Last updated 2026-11-25: Build tools for staff (//wand, //set and the rest; /cf edit); Crop Sense needs a hoe, cocoa framed again.</p>
 </div>
 </footer>
 </body>
