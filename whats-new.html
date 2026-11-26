@@ -30,8 +30,9 @@
 <main id="main">
 <h1>What's new</h1>
 <p class="lead">Every update, newest first, as the Discord update threads posted it: what changed, and whether you need the new kit.</p>
-<details class="toc-all"><summary>All 45 updates</summary>
+<details class="toc-all"><summary>All 46 updates</summary>
 <ul>
+<li><a href="#2026-11-25-build-tools-brushes">2026-11-25 · Build tools: brushes</a></li>
 <li><a href="#2026-11-25-build-tools-clipboard">2026-11-25 · Build tools: copy and paste, shapes and templates</a></li>
 <li><a href="#2026-11-25-build-tools">2026-11-25 · Build tools for staff, and Crop Sense needs a hoe</a></li>
 <li><a href="#2026-11-24-permission-ranks">2026-11-24 · Ranks, and towns for sale</a></li>
@@ -79,6 +80,22 @@
 <li><a href="#2026-10-19-feedback-round-2">2026-10-19 · Survival now has teeth</a></li>
 </ul>
 </details>
+<section class="note-entry post" id="2026-11-25-build-tools-brushes">
+<h2><a class="note-date" href="#2026-11-25-build-tools-brushes">2026-11-25</a> Build tools: brushes</h2>
+<p><strong>Brushes (Builders, Settlers and staff)</strong></p>
+<ul class="dots">
+<li><code>//brush &lt;kind&gt; &lt;size&gt; [block]</code> puts a brush on the item type in your hand. Right click paints a stroke where you look, up to 200 blocks away; left click undoes your last stroke. <code>//brush none</code> takes it off, <code>//brush</code> lists yours.</li>
+<li>Kinds: <code>sphere</code> (a ball of the block), <code>paint</code> (re-covers the surface), <code>smooth</code>, <code>raise</code>, <code>lower</code>, <code>flatten</code> (to the height you clicked) and <code>erode</code> (wears away overhangs and fills small holes).</li>
+<li><code>//mask grass_block,dirt</code> makes every brush touch only those blocks; <code>//mask</code> alone clears it.</li>
+<li>Brushes never go on the Builder&#39;s Wand, Confluence items, food, buckets, spawn eggs, tools of war and the like.</li>
+<li>A stroke across the edge of where you may build changes only your side and says how many blocks it left alone. What it places drops nothing when broken, like every build tool.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>No new kit</strong></p>
+<ul class="dots">
+<li>Only the server changed: keep your current mod. The server restarts once for this update.</li>
+</ul>
+</section>
 <section class="note-entry post" id="2026-11-25-build-tools-clipboard">
 <h2><a class="note-date" href="#2026-11-25-build-tools-clipboard">2026-11-25</a> Build tools: copy and paste, shapes and templates</h2>
 <p><strong>Copy and paste (Builders, Settlers and staff)</strong></p>
@@ -1498,8 +1515,8 @@
 <footer class="foot">
 <div class="foot-inner">
 <p class="notice">NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</p>
-<p class="stamp">Built from c1f8c18 on 2026-11-25</p>
-<p class="guide-date">Player Guide: Last updated 2026-11-25: Build tools: copy and paste with a preview, shapes and a shared template library; tool-placed shriekers cannot summon.</p>
+<p class="stamp">Built from 0a693dd on 2026-11-25</p>
+<p class="guide-date">Player Guide: Last updated 2026-11-25: Build tools: brushes (//brush sphere, paint, smooth, raise, lower, flatten, erode) and //mask.</p>
 </div>
 </footer>
 </body>
