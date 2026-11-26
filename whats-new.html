@@ -30,8 +30,9 @@
 <main id="main">
 <h1>What's new</h1>
 <p class="lead">Every update, newest first, as the Discord update threads posted it: what changed, and whether you need the new kit.</p>
-<details class="toc-all"><summary>All 44 updates</summary>
+<details class="toc-all"><summary>All 45 updates</summary>
 <ul>
+<li><a href="#2026-11-25-build-tools-clipboard">2026-11-25 · Build tools: copy and paste, shapes and templates</a></li>
 <li><a href="#2026-11-25-build-tools">2026-11-25 · Build tools for staff, and Crop Sense needs a hoe</a></li>
 <li><a href="#2026-11-24-permission-ranks">2026-11-24 · Ranks, and towns for sale</a></li>
 <li><a href="#2026-11-23-loading-screen">2026-11-23 · A loading screen when you join</a></li>
@@ -78,6 +79,40 @@
 <li><a href="#2026-10-19-feedback-round-2">2026-10-19 · Survival now has teeth</a></li>
 </ul>
 </details>
+<section class="note-entry post" id="2026-11-25-build-tools-clipboard">
+<h2><a class="note-date" href="#2026-11-25-build-tools-clipboard">2026-11-25</a> Build tools: copy and paste, shapes and templates</h2>
+<p><strong>Copy and paste (Builders, Settlers and staff)</strong></p>
+<ul class="dots">
+<li><code>//copy</code> and <code>//cut</code> take your selection into your clipboard, <code>//paste</code> puts it down where you stand (add <code>-a</code> to leave the air out). <code>//rotate 90</code>, <code>//flip</code> turn it, and stairs, logs, doors and signs turn with it.</li>
+<li>While you hold the Builder&#39;s Wand with something copied, a cyan box shows where <code>//paste</code> will land.</li>
+<li><code>//move</code> and <code>//stack</code> shift or repeat the selection in the direction you look (or the one you name).</li>
+<li>Copies keep blocks and sign text but never items: chests, barrels, lecterns and jukeboxes come out empty. <code>//cut</code> and <code>//move</code> leave any chest that holds items where it stands.</li>
+<li>Your clipboard lasts until you leave the server.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>Shapes</strong></p>
+<ul class="dots">
+<li><code>//sphere</code>, <code>//cyl</code> and <code>//pyramid</code> build at your feet with any block or mix; <code>//hsphere</code>, <code>//hcyl</code> and <code>//hpyramid</code> make them hollow.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>Templates</strong></p>
+<ul class="dots">
+<li><code>//template save &lt;name&gt;</code> keeps your clipboard in a library everyone with the tools can use; <code>//template load</code>, <code>//template list</code> and <code>//template delete</code> (your own only) manage it.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>The rules stay the same</strong></p>
+<ul class="dots">
+<li>Copy, paste and shapes work only where your rank lets you build, and what they place drops nothing when broken. <code>//undo</code> covers all of it.</li>
+<li>Tool-placed sculk shriekers can no longer summon a Warden.</li>
+</ul>
+<div class="gap"></div>
+<p><strong>New kit required</strong></p>
+<ul class="dots">
+<li>The mod changed and the protocol is now 31, so an old mod will say &quot;Protocol mismatch&quot;.</li>
+<li>Download the latest zip and, with the game closed, replace confluence-mod-0.1.0.jar in your mods folder with the one from the new zip.</li>
+<li>The server restarts once for this update.</li>
+</ul>
+</section>
 <section class="note-entry post" id="2026-11-25-build-tools">
 <h2><a class="note-date" href="#2026-11-25-build-tools">2026-11-25</a> Build tools for staff, and Crop Sense needs a hoe</h2>
 <p><strong>Build tools (Builders, Settlers and staff)</strong></p>
@@ -1463,8 +1498,8 @@
 <footer class="foot">
 <div class="foot-inner">
 <p class="notice">NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.</p>
-<p class="stamp">Built from 0481b2a on 2026-11-25</p>
-<p class="guide-date">Player Guide: Last updated 2026-11-25: Build tools for staff (//wand, //set and the rest; /cf edit); Crop Sense needs a hoe, cocoa framed again.</p>
+<p class="stamp">Built from c1f8c18 on 2026-11-25</p>
+<p class="guide-date">Player Guide: Last updated 2026-11-25: Build tools: copy and paste with a preview, shapes and a shared template library; tool-placed shriekers cannot summon.</p>
 </div>
 </footer>
 </body>
